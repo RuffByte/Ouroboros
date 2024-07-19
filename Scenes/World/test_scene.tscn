@@ -534,7 +534,6 @@ texture = ExtResource("3_gsoqi")
 texture_scale = 0.3
 
 [node name="TileMap" type="TileMap" parent="."]
-modulate = Color(1, 1, 1, 1)
 material = SubResource("CanvasItemMaterial_m3xar")
 position = Vector2(1, 0)
 tile_set = SubResource("TileSet_j6mrn")
