@@ -1,0 +1,78 @@
+[gd_scene load_steps=12 format=3 uid="uid://bkq3evnnyql11"]
+
+[ext_resource type="Texture2D" uid="uid://bg0bk0m1dtpih" path="res://Assets/TempAssets/Characters/Premium Charakter Spritesheet.png" id="1_2jg2o"]
+[ext_resource type="Script" path="res://Utility/Scripts/StateMachine.gd" id="2_yq07j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ueobo"]
+atlas = ExtResource("1_2jg2o")
+region = Rect2(16, 15, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0b76m"]
+atlas = ExtResource("1_2jg2o")
+region = Rect2(64, 15, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1jbk"]
+atlas = ExtResource("1_2jg2o")
+region = Rect2(112, 15, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_witu0"]
+atlas = ExtResource("1_2jg2o")
+region = Rect2(160, 15, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcao6"]
+atlas = ExtResource("1_2jg2o")
+region = Rect2(208, 15, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpu36"]
+atlas = ExtResource("1_2jg2o")
+region = Rect2(256, 15, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyxu1"]
+atlas = ExtResource("1_2jg2o")
+region = Rect2(304, 15, 16, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vuiop"]
+atlas = ExtResource("1_2jg2o")
+region = Rect2(352, 15, 16, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_inys8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ueobo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0b76m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1jbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_witu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcao6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpu36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyxu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vuiop")
+}],
+"loop": true,
+"name": &"PlayerIdleDown",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_inys8")
+animation = &"PlayerIdleDown"
+frame_progress = 0.491112
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_yq07j")
