@@ -1,5 +1,5 @@
 extends Node
-
+class_name StateMachine
 @export var initial_state : State
 @export var animation : AnimatedSprite2D
 
@@ -12,8 +12,6 @@ func _ready() -> void:
 			states[child.name.to_lower()] = child
 			child.transitioned.connect(on_child_transition)
 		child.animations = animation
-	
-		
 	if initial_state:
 		initial_state.enter()
 		current_state = initial_state

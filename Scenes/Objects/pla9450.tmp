@@ -508,7 +508,7 @@ script = ExtResource("1_suhjh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_inys8")
 animation = &"PlayerWalkLeft"
-frame_progress = 0.00566673
+frame_progress = 0.69625
 
 [node name="PlayerStateMachine" type="Node" parent="." node_paths=PackedStringArray("movement_component", "initial_state", "animation")]
 script = ExtResource("3_u6w7i")
