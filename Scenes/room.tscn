@@ -144,4 +144,4 @@ room = NodePath("../../../br")
 
 [node name="DoorL" parent="tr/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_3iqqo")]
 position = Vector2(-300, -10)
-room = NodePath("../..")
+room = NodePath("../../../tl")

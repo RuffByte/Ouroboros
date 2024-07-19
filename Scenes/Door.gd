@@ -18,7 +18,7 @@ func get_closest_door_in_room() -> Node2D:
 		if dist < shortest:
 			shortest = dist
 			closest_door = door
-	return closest_door.get_node("playerSpawnLocation").global_position
+	return closest_door
 	
 func get_door_spawn_location(door) -> Vector2:
 	return door.get_node("playerSpawnLocation").global_position
@@ -27,5 +27,5 @@ func _on_area_2d_body_entered(body):
 	if !room:
 		return
 	if body is Playerrr:
-		var next_room = get_closest_door_in_room()
+		var next_room: Node2D = get_closest_door_in_room()
 		body.position = get_door_spawn_location(next_room)
