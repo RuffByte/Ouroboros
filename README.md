@@ -12,5 +12,6 @@ This is RuffByte's submission for the 2024 Kiwi Jam!
 | Mayo       | Lead Writer / Creative Director
 | Matthew Shing    | Lead Artist       |
 | Winston Wijaya | Artist |
+| Ruffy the Dog | Mascot |
 
 ---
