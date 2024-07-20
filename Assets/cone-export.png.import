@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diqj2q418ntkm"
-path="res://.godot/imported/tileset-2.1-sheet-sheet.png-ba612ebfb72ca13e20120e77052d769a.ctex"
+uid="uid://bkobtsxmf7qvn"
+path="res://.godot/imported/cone-export.png-55bd2e3f195f5ddc4b61070bf1818fbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/tileset-2.1-sheet-sheet.png"
-dest_files=["res://.godot/imported/tileset-2.1-sheet-sheet.png-ba612ebfb72ca13e20120e77052d769a.ctex"]
+source_file="res://Assets/cone-export.png"
+dest_files=["res://.godot/imported/cone-export.png-55bd2e3f195f5ddc4b61070bf1818fbf.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2hkhjgage2n1"
-path="res://.godot/imported/Square.png-7b0c34e1226bd5e8865874beda34017b.ctex"
+uid="uid://brwm1cpmiburh"
+path="res://.godot/imported/cone-export-export.png-eec8de8a1e1a4d540cdb18f73dcae91e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TempAssets/Dungeon Prison/Assets/Square.png"
-dest_files=["res://.godot/imported/Square.png-7b0c34e1226bd5e8865874beda34017b.ctex"]
+source_file="res://Assets/cone-export-export.png"
+dest_files=["res://.godot/imported/cone-export-export.png-eec8de8a1e1a4d540cdb18f73dcae91e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diqj2q418ntkm"
-path="res://.godot/imported/tileset-2.1-sheet-sheet.png-ba612ebfb72ca13e20120e77052d769a.ctex"
+uid="uid://c2hkhjgage2n1"
+path="res://.godot/imported/Square.png-30e545a078e10ead85783676822da0d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/tileset-2.1-sheet-sheet.png"
-dest_files=["res://.godot/imported/tileset-2.1-sheet-sheet.png-ba612ebfb72ca13e20120e77052d769a.ctex"]
+source_file="res://Assets/Square.png"
+dest_files=["res://.godot/imported/Square.png-30e545a078e10ead85783676822da0d4.ctex"]
 
 [params]
 
