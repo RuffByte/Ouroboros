@@ -8,6 +8,7 @@ font_size = 50
 
 [node name="UI" type="CanvasLayer"]
 process_mode = 3
+layer = 3
 script = ExtResource("1_el12f")
 action_items = Array[String](["move_up", "move_left", "move_down", "move_right", "shoot"])
 

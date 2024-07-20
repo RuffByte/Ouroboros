@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c08d0isnhyj3a"]
+
+[ext_resource type="Texture2D" uid="uid://t8bbc0s3qew" path="res://Assets/Art/kiwijam.v1.png" id="2_f3bu6"]
+[ext_resource type="PackedScene" uid="uid://c3vqixesdja5a" path="res://Utility/Components/pickup_area.tscn" id="2_jt3mi"]
+[ext_resource type="Resource" uid="uid://dhhft2c0kgpwp" path="res://dialogue/test.dialogue" id="3_chvxd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2acxi"]
+
+[node name="Notes" type="Sprite2D"]
+texture = ExtResource("2_f3bu6")
+region_enabled = true
+region_rect = Rect2(446.601, 190.167, 17.6695, 19.4075)
+
+[node name="PickupArea" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_jt3mi")]
+dialogue_resource = ExtResource("3_chvxd")
+sprite = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea"]
+shape = SubResource("RectangleShape2D_2acxi")

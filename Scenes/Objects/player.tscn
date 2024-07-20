@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cm81x183buaw8" path="res://Assets/cone_2.0.png" id="10_vfvtv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqfsq"]
-size = Vector2(8, 6)
+size = Vector2(11, 33)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8cs4p"]
 atlas = ExtResource("10_mw5ol")
@@ -281,6 +281,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 5
 position = Vector2(-17, 0)
 script = ExtResource("1_suhjh")
 
@@ -301,7 +302,11 @@ script = ExtResource("5_wdanq")
 script = ExtResource("4_tpeha")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(5, 5)
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 2.0
 
 [node name="AnimationController" type="Node2D" parent="." node_paths=PackedStringArray("animations", "movement_component")]
 script = ExtResource("7_godpu")
@@ -319,7 +324,7 @@ texture_scale = 0.2
 script = ExtResource("9_l0hti")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6)
+position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_mqfsq")
 
 [node name="GUN" type="RayCast2D" parent="."]

@@ -2,6 +2,7 @@ extends Node
 
 @onready var shooting: bool = false
 @onready var player_ammo: int = 3
+@onready var in_dialogue = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

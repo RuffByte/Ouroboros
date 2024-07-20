@@ -24,4 +24,5 @@ func _input(event: InputEvent) -> void:
 				print("hello")
 		await get_tree().create_timer(1).timeout
 		GameManager.shooting = false
+
 	
