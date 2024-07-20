@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c10nonnehk66w"]
+
+[ext_resource type="PackedScene" uid="uid://bkuqxhawucijc" path="res://Scenes/BaseDoor.tscn" id="1_a81pq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wctd"]
+size = Vector2(66.6665, 1.19048)
+
+[node name="Door" instance=ExtResource("1_a81pq")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, -0.595238)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_5wctd")

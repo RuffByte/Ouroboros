@@ -7,9 +7,9 @@
 [ext_resource type="Script" path="res://Utility/Scripts/MovementComponent.gd" id="4_tpeha"]
 [ext_resource type="Script" path="res://Scripts/Player/States/PlayerMove.gd" id="5_wdanq"]
 [ext_resource type="Script" path="res://Scripts/Player/AnimationController.gd" id="7_godpu"]
-[ext_resource type="Texture2D" uid="uid://cdq720nk720g1" path="res://Assets/cone.png" id="8_6hipn"]
 [ext_resource type="Texture2D" uid="uid://0lm5g6wgc20f" path="res://Assets/light.png" id="8_ia8xl"]
 [ext_resource type="Script" path="res://Scenes/Objects/Node2D.gd" id="9_4d6x0"]
+[ext_resource type="Texture2D" uid="uid://brwm1cpmiburh" path="res://Assets/cone-export-export.png" id="10_t8bsn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ueobo"]
 atlas = ExtResource("1_2jg2o")
@@ -542,7 +542,8 @@ position = Vector2(1, -20)
 script = ExtResource("9_4d6x0")
 
 [node name="PointLight2D" type="PointLight2D" parent="Node2D"]
-energy = 0.5
-texture = ExtResource("8_6hipn")
+position = Vector2(-3, 169)
+energy = 0.3
+texture = ExtResource("10_t8bsn")
 offset = Vector2(0, 50.675)
-texture_scale = 0.3
+texture_scale = 0.2

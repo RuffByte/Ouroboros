@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bai1l0sejfr6d"]
 
 [ext_resource type="PackedScene" uid="uid://c28bcwv6yenrf" path="res://Scenes/Player.tscn" id="1_s1385"]
-[ext_resource type="PackedScene" uid="uid://bkuqxhawucijc" path="res://Scenes/door.tscn" id="2_3iqqo"]
+[ext_resource type="PackedScene" uid="uid://bkuqxhawucijc" path="res://Scenes/BaseDoor.tscn" id="2_3iqqo"]
 
 [sub_resource type="Gradient" id="Gradient_pdwvi"]
 colors = PackedColorArray(0.25098, 0.698039, 0, 1, 0, 0.140428, 0.125559, 1)

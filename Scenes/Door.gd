@@ -6,6 +6,7 @@ extends Sprite2D
 func _ready():
 	if room:
 		print("need a room")
+		print("Hi")
 	pass
 	
 func get_closest_door_in_room() -> Node2D:
