@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dvw6yth2rqx3j"]
 
-[ext_resource type="Script" path="res://Scenes/Objects/ghost.gd" id="1_tncp4"]
+[ext_resource type="Script" path="res://Scripts/Entities/ghost.gd" id="1_nl1ms"]
 
 [sub_resource type="Gradient" id="Gradient_dlykk"]
 
@@ -11,9 +11,10 @@ gradient = SubResource("Gradient_dlykk")
 radius = 1126.9
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ow00k"]
+size = Vector2(122.205, 126.94)
 
 [node name="Ghost" type="CharacterBody2D"]
-script = ExtResource("1_tncp4")
+script = ExtResource("1_nl1ms")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.559998, 0.559998)
@@ -25,110 +26,8 @@ texture = SubResource("GradientTexture2D_61d4h")
 scale = Vector2(-0.0702442, -0.0702442)
 shape = SubResource("CircleShape2D_22ctp")
 
-[node name="Node2D" type="Node2D" parent="."]
-visible = false
-
-[node name="RayCast2D" type="RayCast2D" parent="Node2D"]
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D2" type="RayCast2D" parent="Node2D"]
-target_position = Vector2(2.08165e-12, -100)
-
-[node name="RayCast2D3" type="RayCast2D" parent="Node2D"]
-rotation = 0.261799
-scale = Vector2(1, 1)
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D4" type="RayCast2D" parent="Node2D"]
-rotation = 0.261799
-scale = Vector2(1, 1)
-target_position = Vector2(2.08165e-12, -100)
-
-[node name="RayCast2D5" type="RayCast2D" parent="Node2D"]
-rotation = 0.523599
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D6" type="RayCast2D" parent="Node2D"]
-rotation = 0.523599
-target_position = Vector2(2.08165e-12, -100)
-
-[node name="RayCast2D7" type="RayCast2D" parent="Node2D"]
-rotation = 0.785398
-scale = Vector2(1, 1)
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D8" type="RayCast2D" parent="Node2D"]
-rotation = 0.785398
-scale = Vector2(1, 1)
-target_position = Vector2(2.08165e-12, -100)
-
-[node name="RayCast2D9" type="RayCast2D" parent="Node2D"]
-rotation = 1.0472
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D10" type="RayCast2D" parent="Node2D"]
-rotation = 1.0472
-target_position = Vector2(2.08165e-12, -100)
-
-[node name="RayCast2D11" type="RayCast2D" parent="Node2D"]
-rotation = 1.309
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D12" type="RayCast2D" parent="Node2D"]
-rotation = 1.309
-target_position = Vector2(2.08165e-12, -100)
-
-[node name="RayCast2D13" type="RayCast2D" parent="Node2D"]
-rotation = 1.5708
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D14" type="RayCast2D" parent="Node2D"]
-rotation = 1.5708
-target_position = Vector2(2.08165e-12, -100)
-
-[node name="RayCast2D15" type="RayCast2D" parent="Node2D"]
-rotation = 1.8326
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D16" type="RayCast2D" parent="Node2D"]
-rotation = 1.8326
-target_position = Vector2(2.08165e-12, -100)
-
-[node name="RayCast2D17" type="RayCast2D" parent="Node2D"]
-rotation = 2.0944
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D18" type="RayCast2D" parent="Node2D"]
-rotation = 2.0944
-target_position = Vector2(2.08165e-12, -100)
-
-[node name="RayCast2D19" type="RayCast2D" parent="Node2D"]
-rotation = 2.35619
-scale = Vector2(1, 1)
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D20" type="RayCast2D" parent="Node2D"]
-rotation = 2.35619
-scale = Vector2(1, 1)
-target_position = Vector2(2.08165e-12, -100)
-
-[node name="RayCast2D21" type="RayCast2D" parent="Node2D"]
-rotation = 2.61799
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D22" type="RayCast2D" parent="Node2D"]
-rotation = 2.61799
-target_position = Vector2(2.08165e-12, -100)
-
-[node name="RayCast2D23" type="RayCast2D" parent="Node2D"]
-rotation = 2.87979
-target_position = Vector2(2.08165e-12, 100)
-
-[node name="RayCast2D24" type="RayCast2D" parent="Node2D"]
-rotation = 2.87979
-target_position = Vector2(2.08165e-12, -100)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5781, 0.0426822)
 scale = Vector2(0.26876, 0.282927)
 shape = SubResource("RectangleShape2D_ow00k")
 

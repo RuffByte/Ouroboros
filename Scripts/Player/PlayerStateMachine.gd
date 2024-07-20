@@ -1,5 +1,6 @@
 extends StateMachine
 @export var movement_component: MovementComponent
+@export var gun : RayCast2D
 
 func _ready() -> void:
 	for child in get_children():
@@ -8,6 +9,7 @@ func _ready() -> void:
 			child.transitioned.connect(on_child_transition)
 		child.animations = animation
 		child.movement_component = movement_component
+		child.raycast = gun
 	if initial_state:
 		initial_state.enter()
 		current_state = initial_state

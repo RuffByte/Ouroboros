@@ -10,4 +10,3 @@ script = ExtResource("1_rmjwp")
 [node name="MidnightDreams" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 stream = ExtResource("2_ky5mb")
-bus = &"MUSIC"

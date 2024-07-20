@@ -1,8 +1,8 @@
 extends Enemy
 class_name Ghost
 
-const AGGROTIME: float = 2.0
-const SPEED : float = 45.0
+const AGGROTIME: float = 5.0
+var SPEED : float = 45.0
 var TP_TIMER: float = 10
 
 var target: Node2D
@@ -12,7 +12,7 @@ var idleTimer: float = 0
 var hasFinishFollowIntoRoom: bool = false
 var isInView : bool = false
 
-var unlockedRoam: bool = true
+var unlockedRoam: bool = false
 
 func _ready():
 	pass
@@ -25,7 +25,6 @@ func _physics_process(delta) -> void:
 			reset_idle()
 			teleport_to_random_room()
 			return		
-	print(aggroTimer)
 	time_aggro(delta)
 	if !target:
 		return
@@ -70,3 +69,9 @@ func reset_aggro() -> void:
 	
 func reset_idle() -> void:
 	idleTimer = 0.0
+
+func get_hit_LOL_REKT_360():
+	SPEED -= 30
+	await get_tree().create_timer(6).timeout
+	SPEED += 30
+

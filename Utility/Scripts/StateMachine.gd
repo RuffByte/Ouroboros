@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 class_name StateMachine
 @export var initial_state : State
 @export var animation : AnimatedSprite2D
