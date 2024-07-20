@@ -28,5 +28,19 @@ func _on_area_2d_body_entered(body):
 	if !room:
 		return
 	if body is Player:
-		var next_room: Node2D = get_closest_door_in_room()
-		body.position = get_door_spawn_location(next_room)
+		go_to_room(body)
+		for enemy in owner.get_node("enemies").get_children():
+			if enemy is Enemy and enemy.target is Player:
+				var temp: Node2D = enemy.target
+				enemy.set_target(self)
+			else:
+				push_warning("a non enemy is in a enemy only node")
+				
+	if body is Enemy and not body.target is Player:
+		go_to_room(body)
+		body.set_target(null)
+		
+func go_to_room(body: Node2D):
+	var next_room: Node2D = get_closest_door_in_room()
+	var location: Vector2 = get_door_spawn_location(next_room)
+	body.position = location
