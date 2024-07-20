@@ -11,6 +11,7 @@ extends CanvasLayer
 @onready var main_ui: Control = $MainUi
 @onready var quit = $PauseMenu/MarginContainer/VBoxContainer/Quit
 @onready var why: bool = true
+@onready var ammo: Label = $MainUi/MarginContainer/VBoxContainer/HBoxContainer/Ammo
 
 @export var action_items: Array[String]
 # Called when the node enters the scene tree for the first time.
@@ -19,6 +20,8 @@ func _ready() -> void:
 	pause_menu.visible = false
 	create_action_remap_items()
 	
+func _physics_process(delta: float) -> void:
+		ammo.text = "ammo: " + str(GameManager.player_ammo)
 	
 func update_slider() -> void:
 	master_slider.value = db_to_linear(AudioServer.get_bus_volume_db(MASTER_BUS))
@@ -30,7 +33,7 @@ func _input(event: InputEvent) -> void:
 		pause_menu.visible = !pause_menu.visible
 		main_ui.visible = !main_ui.visible
 		get_tree().paused = !get_tree().paused
-		
+	
 func _on_quit_pressed() -> void:
 	get_tree().quit()
 

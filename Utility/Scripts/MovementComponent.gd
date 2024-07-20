@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 class_name MovementComponent
 
 func get_movement_direction() -> Vector2:
