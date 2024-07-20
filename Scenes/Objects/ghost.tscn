@@ -8,7 +8,7 @@
 radius = 1126.9
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ow00k"]
-size = Vector2(122.205, 126.94)
+size = Vector2(81.3195, 40.2047)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntvsx"]
 atlas = ExtResource("2_nadvl")
@@ -280,21 +280,24 @@ animations = [{
 script = ExtResource("1_nl1ms")
 
 [node name="DetectArea" type="Area2D" parent="."]
+position = Vector2(-1, -10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea"]
 scale = Vector2(-0.0702442, -0.0702442)
 shape = SubResource("CircleShape2D_22ctp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5781, 0.0426822)
-scale = Vector2(0.26876, 0.282927)
+position = Vector2(1.19209e-07, -5.68434e-14)
+scale = Vector2(0.108762, 0.165025)
 shape = SubResource("RectangleShape2D_ow00k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -10)
 sprite_frames = SubResource("SpriteFrames_iwq23")
 animation = &"MonsterWalkLeft"
 
 [node name="EnemyAnimationController" type="Node2D" parent="." node_paths=PackedStringArray("animations")]
+position = Vector2(-1, -10)
 script = ExtResource("3_hhc8t")
 animations = NodePath("../AnimatedSprite2D")
 
