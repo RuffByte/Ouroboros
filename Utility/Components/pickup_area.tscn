@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3vqixesdja5a"]
+
+[ext_resource type="Script" path="res://Utility/Scripts/pickup_area.gd" id="1_62t1j"]
+
+[node name="PickupArea" type="Area2D"]
+script = ExtResource("1_62t1j")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

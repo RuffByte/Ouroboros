@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c10nonnehk66w" path="res://Scenes/InvisidbleDoor.tscn" id="2_uf5r0"]
 [ext_resource type="PackedScene" uid="uid://bkq3evnnyql11" path="res://Scenes/Objects/player.tscn" id="3_i4niy"]
 [ext_resource type="PackedScene" uid="uid://jglt73g7b7ky" path="res://Scenes/Rooms/hallway.tscn" id="4_4fjp5"]
-[ext_resource type="PackedScene" uid="uid://dwxyfgahxquo0" path="res://Scenes/Objects/closet.tscn" id="6_s4b2q"]
+[ext_resource type="PackedScene" uid="uid://ba2357qce845l" path="res://Scenes/Objects/closet.tscn" id="6_s4b2q"]
 
 [node name="MainWorld" type="Node2D"]
 
