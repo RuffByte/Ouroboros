@@ -2,7 +2,7 @@ extends Node
 
 @onready var shooting: bool = false
 @onready var player_ammo: int = 3
-@onready var key_items : Array
+@onready var key_items : Array = ["test"]
 
 func check_item(item: String):
 	if item in key_items:

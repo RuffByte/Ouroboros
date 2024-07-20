@@ -118,7 +118,7 @@ position = Vector2(-1145, -12)
 position = Vector2(97, 23)
 rotation = 1.5708
 room = NodePath("../../../1F Main")
-item_required = "asda"
+item_required = "test"
 
 [node name="Study Room" parent="rooms" instance=ExtResource("8_tjt6u")]
 position = Vector2(-1002, -365)
@@ -181,4 +181,4 @@ room = NodePath("../../../GuestRoom 1")
 
 [node name="Closet" parent="." instance=ExtResource("6_s4b2q")]
 z_index = 2
-position = Vector2(459, -376)
+position = Vector2(-1098, -77)

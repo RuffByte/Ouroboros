@@ -1,9 +1,10 @@
-[gd_scene load_steps=47 format=3 uid="uid://bkq3evnnyql11"]
+[gd_scene load_steps=49 format=3 uid="uid://bkq3evnnyql11"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_suhjh"]
 [ext_resource type="Script" path="res://Scripts/Player/PlayerStateMachine.gd" id="3_u6w7i"]
 [ext_resource type="Script" path="res://Scripts/Player/States/PlayerIdle.gd" id="4_l0yl2"]
 [ext_resource type="Script" path="res://Utility/Scripts/MovementComponent.gd" id="4_tpeha"]
+[ext_resource type="Script" path="res://Scenes/Objects/PlayerFreeze.gd" id="5_aw5ur"]
 [ext_resource type="Script" path="res://Scripts/Player/States/PlayerMove.gd" id="5_wdanq"]
 [ext_resource type="Script" path="res://Scripts/Player/AnimationController.gd" id="7_godpu"]
 [ext_resource type="Texture2D" uid="uid://0lm5g6wgc20f" path="res://Assets/light.png" id="8_ia8xl"]
@@ -11,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://fvtccfj31tug" path="res://Assets/Art/Detective_SpriteSheet.png" id="10_mw5ol"]
 [ext_resource type="Texture2D" uid="uid://cm81x183buaw8" path="res://Assets/cone_2.0.png" id="10_vfvtv"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqfsq"]
-size = Vector2(11, 33)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ny15s"]
+radius = 7.56637
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8cs4p"]
 atlas = ExtResource("10_mw5ol")
@@ -280,9 +281,11 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fm6t5"]
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
-position = Vector2(-17, 0)
+position = Vector2(2.08165e-12, 2.08165e-12)
 script = ExtResource("1_suhjh")
 
 [node name="PlayerStateMachine" type="Node2D" parent="." node_paths=PackedStringArray("movement_component", "gun", "initial_state", "animation")]
@@ -298,10 +301,14 @@ script = ExtResource("4_l0yl2")
 [node name="PlayerMove" type="Node2D" parent="PlayerStateMachine"]
 script = ExtResource("5_wdanq")
 
+[node name="PlayerFreeze" type="Node2D" parent="PlayerStateMachine"]
+script = ExtResource("5_aw5ur")
+
 [node name="MovementComponent" type="Node2D" parent="."]
 script = ExtResource("4_tpeha")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -13)
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
@@ -309,29 +316,40 @@ rotation_smoothing_enabled = true
 rotation_smoothing_speed = 2.0
 
 [node name="AnimationController" type="Node2D" parent="." node_paths=PackedStringArray("animations", "movement_component")]
+position = Vector2(0, -13)
 script = ExtResource("7_godpu")
 animations = NodePath("../AnimatedSprite2D")
 movement_component = NodePath("../MovementComponent")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-visible = false
 texture = ExtResource("8_ia8xl")
 texture_scale = 0.09
 
 [node name="Flashlight" type="PointLight2D" parent="."]
-visible = false
-position = Vector2(0, -1)
+position = Vector2(-2.08165e-12, -13)
 texture = ExtResource("10_vfvtv")
 texture_scale = 0.2
 script = ExtResource("9_l0hti")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.5)
-shape = SubResource("RectangleShape2D_mqfsq")
+position = Vector2(-0.5, -1)
+shape = SubResource("CircleShape2D_ny15s")
 
 [node name="GUN" type="RayCast2D" parent="."]
+position = Vector2(0, -13)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_inys8")
 animation = &"PlayerWalkRight"
 frame_progress = 0.374172
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.08165e-12, 12)
+shape = SubResource("RectangleShape2D_fm6t5")
+
+[connection signal="area_entered" from="Area2D" to="PlayerStateMachine" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="PlayerStateMachine" method="_on_area_2d_area_exited"]

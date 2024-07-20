@@ -29,7 +29,6 @@ func get_door_spawn_location(door) -> Vector2:
 	return door.get_node("playerSpawnLocation").global_position
 	
 func _on_area_2d_body_entered(body):
-	print("enter")
 	if !room:
 		return
 	if body is Player:
@@ -57,4 +56,7 @@ func go_to_room(body: Node2D):
 		await get_tree().create_timer(0.05).timeout
 		get_viewport().get_camera_2d().position_smoothing_enabled = true		
 
-	
+func _on_pickup_area_2_body_entered(body):
+	if body is Player:
+		if GameManager.check_item(item_required):
+			lock.queue_free()

@@ -32,7 +32,7 @@ position = Vector2(2.08165e-12, 0.5)
 shape = SubResource("RectangleShape2D_5wctd")
 
 [node name="playerSpawnLocation" parent="." index="1"]
-position = Vector2(0, 1.8)
+position = Vector2(2.08165e-12, 4)
 
 [node name="Marker2D" type="Marker2D" parent="playerSpawnLocation" index="0"]
 position = Vector2(2.08165e-12, 2.08165e-12)
@@ -56,3 +56,5 @@ dialogue_resource = ExtResource("3_7ire8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="if locked/PickupArea2" index="0"]
 position = Vector2(0, 0.6)
 shape = SubResource("RectangleShape2D_3hhln")
+
+[connection signal="body_entered" from="if locked/PickupArea2" to="." method="_on_pickup_area_2_body_entered"]

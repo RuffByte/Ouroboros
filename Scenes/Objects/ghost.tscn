@@ -7,8 +7,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_22ctp"]
 radius = 1126.9
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow00k"]
-size = Vector2(81.3195, 40.2047)
+[sub_resource type="CircleShape2D" id="CircleShape2D_k5ppe"]
+radius = 7.28011
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ntvsx"]
 atlas = ExtResource("2_nadvl")
@@ -288,8 +288,7 @@ shape = SubResource("CircleShape2D_22ctp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.19209e-07, -5.68434e-14)
-scale = Vector2(0.108762, 0.165025)
-shape = SubResource("RectangleShape2D_ow00k")
+shape = SubResource("CircleShape2D_k5ppe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -10)
