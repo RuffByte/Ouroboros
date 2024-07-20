@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cxtlqh1vr6pit"
+path="res://.godot/imported/lockedDoor.dialogue-0095fc4fbff9c72f9cf13d4650708bd7.tres"
+
+[deps]
+
+source_file="res://dialogue/lockedDoor.dialogue"
+dest_files=["res://.godot/imported/lockedDoor.dialogue-0095fc4fbff9c72f9cf13d4650708bd7.tres"]
+
+[params]
+
+defaults=true

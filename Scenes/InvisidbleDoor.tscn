@@ -1,9 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://c10nonnehk66w"]
+[gd_scene load_steps=9 format=3 uid="uid://c10nonnehk66w"]
 
 [ext_resource type="PackedScene" uid="uid://bkuqxhawucijc" path="res://Scenes/BaseDoor.tscn" id="1_a81pq"]
+[ext_resource type="PackedScene" uid="uid://c3vqixesdja5a" path="res://Utility/Components/pickup_area.tscn" id="2_et00o"]
+[ext_resource type="Resource" uid="uid://cxtlqh1vr6pit" path="res://dialogue/lockedDoor.dialogue" id="3_7ire8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wctd"]
 size = Vector2(32, 1)
+
+[sub_resource type="Gradient" id="Gradient_c1j2q"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6nuw6"]
+gradient = SubResource("Gradient_c1j2q")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07flq"]
+size = Vector2(32, 0.2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hhln"]
+size = Vector2(32, 0.8)
 
 [node name="Door" instance=ExtResource("1_a81pq")]
 position = Vector2(0, 0)
@@ -21,3 +36,23 @@ position = Vector2(0, 1.8)
 
 [node name="Marker2D" type="Marker2D" parent="playerSpawnLocation" index="0"]
 position = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="if locked" type="StaticBody2D" parent="." index="2"]
+position = Vector2(0, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="if locked" index="0"]
+position = Vector2(0, 0.1)
+scale = Vector2(0.46875, 0.003125)
+texture = SubResource("GradientTexture2D_6nuw6")
+
+[node name="wall" type="CollisionShape2D" parent="if locked" index="1"]
+shape = SubResource("RectangleShape2D_07flq")
+
+[node name="PickupArea2" parent="if locked" index="2" node_paths=PackedStringArray("sprite") instance=ExtResource("2_et00o")]
+position = Vector2(0, -0.4)
+sprite = NodePath("../Sprite2D")
+dialogue_resource = ExtResource("3_7ire8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="if locked/PickupArea2" index="0"]
+position = Vector2(0, 0.6)
+shape = SubResource("RectangleShape2D_3hhln")

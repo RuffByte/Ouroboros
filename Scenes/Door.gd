@@ -1,12 +1,17 @@
 extends Sprite2D
 
 @export var room: Node2D
-
+@onready var lock = $"if locked"
+var is_locked: bool
+@export var item_required: String
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if room:
 		print("need a room")
-	pass
+	if item_required:
+		is_locked = true
+	else:
+		lock.queue_free()
 	
 func get_closest_door_in_room() -> Node2D:
 	var doors = room.get_node("doors").get_children()
