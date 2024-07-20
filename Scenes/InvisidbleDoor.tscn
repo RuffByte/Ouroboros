@@ -3,11 +3,21 @@
 [ext_resource type="PackedScene" uid="uid://bkuqxhawucijc" path="res://Scenes/BaseDoor.tscn" id="1_a81pq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wctd"]
-size = Vector2(66.6665, 1.19048)
+size = Vector2(38, 1)
 
 [node name="Door" instance=ExtResource("1_a81pq")]
+position = Vector2(0, 0)
+scale = Vector2(1, 5)
+
+[node name="Area2D" parent="." index="0"]
+position = Vector2(0, -0.8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(0, -0.595238)
-scale = Vector2(1, 1)
+position = Vector2(2.08165e-12, 0.3)
 shape = SubResource("RectangleShape2D_5wctd")
+
+[node name="playerSpawnLocation" parent="." index="1"]
+position = Vector2(0, 1.8)
+
+[node name="Marker2D" type="Marker2D" parent="playerSpawnLocation" index="0"]
+position = Vector2(2.08165e-12, 2.08165e-12)

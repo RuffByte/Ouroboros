@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 func update_facing_direction():
 	var mouse_position = get_global_mouse_position()
 	var direction_to_mouse = (mouse_position - player.global_position).normalized()
-	print(direction_to_mouse)
+	#print(direction_to_mouse)
 	if abs(direction_to_mouse.x) > abs(direction_to_mouse.y):
 		if direction_to_mouse.x > 0:
 			player.facing = "Right"

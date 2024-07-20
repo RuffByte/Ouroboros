@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://bkq3evnnyql11"]
+[gd_scene load_steps=77 format=3 uid="uid://bkq3evnnyql11"]
 
 [ext_resource type="Texture2D" uid="uid://bg0bk0m1dtpih" path="res://Assets/TempAssets/Characters/Premium Charakter Spritesheet.png" id="1_2jg2o"]
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_suhjh"]
@@ -502,6 +502,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqfsq"]
+size = Vector2(8, 6)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_suhjh")
 
@@ -547,3 +550,7 @@ energy = 0.3
 texture = ExtResource("10_t8bsn")
 offset = Vector2(0, 50.675)
 texture_scale = 0.2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_mqfsq")

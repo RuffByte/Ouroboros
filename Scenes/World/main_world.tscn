@@ -1,3 +1,67 @@
-[gd_scene format=3 uid="uid://bpr0emktiyypd"]
+[gd_scene load_steps=5 format=3 uid="uid://bpr0emktiyypd"]
+
+[ext_resource type="PackedScene" uid="uid://diqjcmvysb5e0" path="res://Scenes/Rooms/bedroom.tscn" id="1_hvf0q"]
+[ext_resource type="PackedScene" uid="uid://c10nonnehk66w" path="res://Scenes/InvisidbleDoor.tscn" id="2_uf5r0"]
+[ext_resource type="PackedScene" uid="uid://bkq3evnnyql11" path="res://Scenes/Objects/player.tscn" id="3_i4niy"]
+[ext_resource type="PackedScene" uid="uid://jglt73g7b7ky" path="res://Scenes/Rooms/hallway.tscn" id="4_4fjp5"]
 
 [node name="MainWorld" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("3_i4niy")]
+position = Vector2(-608, -67)
+
+[node name="Bedroom" parent="." instance=ExtResource("1_hvf0q")]
+position = Vector2(-608, -53)
+
+[node name="doors" type="Node2D" parent="Bedroom"]
+
+[node name="Door" parent="Bedroom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(7, -48)
+room = NodePath("../../../Bedroom2")
+
+[node name="Door2" parent="Bedroom/doors" instance=ExtResource("2_uf5r0")]
+position = Vector2(9, 62)
+rotation = 3.14159
+flip_v = true
+
+[node name="Door3" parent="Bedroom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(94, -5)
+rotation = 1.5708
+flip_v = true
+room = NodePath("../../../hallway")
+
+[node name="Bedroom2" parent="." instance=ExtResource("1_hvf0q")]
+position = Vector2(-579, -454)
+
+[node name="doors" type="Node2D" parent="Bedroom2"]
+
+[node name="Door" parent="Bedroom2/doors" instance=ExtResource("2_uf5r0")]
+position = Vector2(7, -48)
+
+[node name="Door2" parent="Bedroom2/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(9, 62)
+rotation = 3.14159
+flip_v = true
+room = NodePath("../../../Bedroom")
+
+[node name="Door3" parent="Bedroom2/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(94, -5)
+rotation = 1.5708
+flip_v = true
+room = NodePath("../../../hallway")
+
+[node name="hallway" parent="." instance=ExtResource("4_4fjp5")]
+position = Vector2(287, -168)
+
+[node name="doors" type="Node2D" parent="hallway"]
+
+[node name="Door" parent="hallway/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(-60, -60)
+rotation = -1.5708
+room = NodePath("../../../Bedroom2")
+
+[node name="Door2" parent="hallway/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(-64, 27)
+rotation = -1.5708
+flip_v = true
+room = NodePath("../../../Bedroom")
