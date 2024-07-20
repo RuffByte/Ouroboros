@@ -312,7 +312,7 @@ script = ExtResource("6_nneyb")
 script = ExtResource("4_tpeha")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 rotation_smoothing_enabled = true
