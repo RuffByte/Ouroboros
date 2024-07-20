@@ -22,9 +22,6 @@ buses/default_bus_layout=""
 [autoload]
 
 PlayerEvents="*res://player_events.gd"
-run/main_scene="res://Scenes/UI/main_menu.tscn"
-config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
 TransitionManager="*res://Scenes/GlobalSingletons/TransitionManager.tscn"
 SoundManager="*res://Scenes/GlobalSingletons/SoundManager.tscn"
 Ui="*res://Scenes/UI/ui.tscn"
