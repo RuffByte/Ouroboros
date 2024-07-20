@@ -2,12 +2,15 @@ extends Node
 
 @onready var shooting: bool = false
 @onready var player_ammo: int = 3
-@onready var in_dialogue = false
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@onready var key_items : Array
 
+func check_item(item: String):
+	if item in key_items:
+		return true
+	return false
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func add_item(item: String):
+	key_items.append(item)
+
+func delete_item(item: String):
+	key_items.erase(item)	

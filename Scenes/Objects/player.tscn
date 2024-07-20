@@ -1,12 +1,10 @@
-[gd_scene load_steps=50 format=3 uid="uid://bkq3evnnyql11"]
+[gd_scene load_steps=47 format=3 uid="uid://bkq3evnnyql11"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_suhjh"]
-[ext_resource type="Script" path="res://Scenes/Objects/PlayerFreeze.gd" id="3_0sq2g"]
 [ext_resource type="Script" path="res://Scripts/Player/PlayerStateMachine.gd" id="3_u6w7i"]
 [ext_resource type="Script" path="res://Scripts/Player/States/PlayerIdle.gd" id="4_l0yl2"]
 [ext_resource type="Script" path="res://Utility/Scripts/MovementComponent.gd" id="4_tpeha"]
 [ext_resource type="Script" path="res://Scripts/Player/States/PlayerMove.gd" id="5_wdanq"]
-[ext_resource type="Script" path="res://Scenes/Objects/PlayerSlow.gd" id="6_nneyb"]
 [ext_resource type="Script" path="res://Scripts/Player/AnimationController.gd" id="7_godpu"]
 [ext_resource type="Texture2D" uid="uid://0lm5g6wgc20f" path="res://Assets/light.png" id="8_ia8xl"]
 [ext_resource type="Script" path="res://Scenes/Objects/Flashlight.gd" id="9_l0hti"]
@@ -14,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cm81x183buaw8" path="res://Assets/cone_2.0.png" id="10_vfvtv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqfsq"]
-size = Vector2(11, 12)
+size = Vector2(11, 33)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8cs4p"]
 atlas = ExtResource("10_mw5ol")
@@ -282,11 +280,9 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu3rw"]
-
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
-position = Vector2(2.08165e-12, 2.08165e-12)
+position = Vector2(-17, 0)
 script = ExtResource("1_suhjh")
 
 [node name="PlayerStateMachine" type="Node2D" parent="." node_paths=PackedStringArray("movement_component", "gun", "initial_state", "animation")]
@@ -296,23 +292,17 @@ gun = NodePath("../GUN")
 initial_state = NodePath("PlayerIdle")
 animation = NodePath("../AnimatedSprite2D")
 
-[node name="PlayerFreeze" type="Node2D" parent="PlayerStateMachine"]
-script = ExtResource("3_0sq2g")
-
 [node name="PlayerIdle" type="Node2D" parent="PlayerStateMachine"]
 script = ExtResource("4_l0yl2")
 
 [node name="PlayerMove" type="Node2D" parent="PlayerStateMachine"]
 script = ExtResource("5_wdanq")
 
-[node name="PlayerSlow" type="Node2D" parent="PlayerStateMachine"]
-script = ExtResource("6_nneyb")
-
 [node name="MovementComponent" type="Node2D" parent="."]
 script = ExtResource("4_tpeha")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 rotation_smoothing_enabled = true
@@ -324,36 +314,24 @@ animations = NodePath("../AnimatedSprite2D")
 movement_component = NodePath("../MovementComponent")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(0, -8)
+visible = false
 texture = ExtResource("8_ia8xl")
 texture_scale = 0.09
 
 [node name="Flashlight" type="PointLight2D" parent="."]
-position = Vector2(0, -9)
+visible = false
+position = Vector2(0, -1)
 texture = ExtResource("10_vfvtv")
 texture_scale = 0.2
 script = ExtResource("9_l0hti")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_mqfsq")
 
 [node name="GUN" type="RayCast2D" parent="."]
-position = Vector2(0, -8)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_inys8")
 animation = &"PlayerWalkRight"
-frame_progress = 0.648146
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(0, -8)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 4)
-scale = Vector2(0.563734, 0.761855)
-shape = SubResource("RectangleShape2D_qu3rw")
-
-[connection signal="area_entered" from="Area2D" to="PlayerStateMachine" method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="PlayerStateMachine" method="_on_area_2d_area_exited"]
+frame_progress = 0.374172
