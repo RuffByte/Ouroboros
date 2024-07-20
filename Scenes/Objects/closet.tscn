@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://ba2357qce845l"]
+
+[ext_resource type="Script" path="res://Scenes/Objects/closet.gd" id="1_prgu5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4y52"]
+size = Vector2(20, 26.5427)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6pog"]
+size = Vector2(48, 31)
+
+[sub_resource type="Gradient" id="Gradient_bw5q3"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_un8kd"]
+gradient = SubResource("Gradient_bw5q3")
+
+[node name="Closet" type="StaticBody2D"]
+script = ExtResource("1_prgu5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 7.11904)
+scale = Vector2(3.34033, 2.17619)
+shape = SubResource("RectangleShape2D_m4y52")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9.5)
+scale = Vector2(1.07341, 0.541493)
+shape = SubResource("RectangleShape2D_o6pog")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, -28)
+scale = Vector2(0.631827, 0.925)
+texture = SubResource("GradientTexture2D_un8kd")
+
+[node name="popout" type="Node2D" parent="."]
+position = Vector2(0, 23)
+
+[node name="Marker2D" type="Marker2D" parent="popout"]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
