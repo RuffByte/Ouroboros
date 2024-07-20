@@ -8,6 +8,9 @@ var animations : AnimatedSprite2D
 var raycast : RayCast2D
 signal transitioned(state: PlayerState, new_state_name: String)
 
+func _physics_process(delta):
+	pass
+
 
 func _input(event: InputEvent) -> void:
 	var mouse_position = get_global_mouse_position()
@@ -24,4 +27,5 @@ func _input(event: InputEvent) -> void:
 				print("hello")
 		await get_tree().create_timer(1).timeout
 		GameManager.shooting = false
+		
 	

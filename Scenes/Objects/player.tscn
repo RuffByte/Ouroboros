@@ -1,10 +1,12 @@
-[gd_scene load_steps=47 format=3 uid="uid://bkq3evnnyql11"]
+[gd_scene load_steps=50 format=3 uid="uid://bkq3evnnyql11"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_suhjh"]
+[ext_resource type="Script" path="res://Scenes/Objects/PlayerFreeze.gd" id="3_0sq2g"]
 [ext_resource type="Script" path="res://Scripts/Player/PlayerStateMachine.gd" id="3_u6w7i"]
 [ext_resource type="Script" path="res://Scripts/Player/States/PlayerIdle.gd" id="4_l0yl2"]
 [ext_resource type="Script" path="res://Utility/Scripts/MovementComponent.gd" id="4_tpeha"]
 [ext_resource type="Script" path="res://Scripts/Player/States/PlayerMove.gd" id="5_wdanq"]
+[ext_resource type="Script" path="res://Scenes/Objects/PlayerSlow.gd" id="6_nneyb"]
 [ext_resource type="Script" path="res://Scripts/Player/AnimationController.gd" id="7_godpu"]
 [ext_resource type="Texture2D" uid="uid://0lm5g6wgc20f" path="res://Assets/light.png" id="8_ia8xl"]
 [ext_resource type="Script" path="res://Scenes/Objects/Flashlight.gd" id="9_l0hti"]
@@ -280,6 +282,8 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu3rw"]
+
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(-17, 0)
 script = ExtResource("1_suhjh")
@@ -291,11 +295,17 @@ gun = NodePath("../GUN")
 initial_state = NodePath("PlayerIdle")
 animation = NodePath("../AnimatedSprite2D")
 
+[node name="PlayerFreeze" type="Node2D" parent="PlayerStateMachine"]
+script = ExtResource("3_0sq2g")
+
 [node name="PlayerIdle" type="Node2D" parent="PlayerStateMachine"]
 script = ExtResource("4_l0yl2")
 
 [node name="PlayerMove" type="Node2D" parent="PlayerStateMachine"]
 script = ExtResource("5_wdanq")
+
+[node name="PlayerSlow" type="Node2D" parent="PlayerStateMachine"]
+script = ExtResource("6_nneyb")
 
 [node name="MovementComponent" type="Node2D" parent="."]
 script = ExtResource("4_tpeha")
@@ -328,3 +338,13 @@ shape = SubResource("RectangleShape2D_mqfsq")
 sprite_frames = SubResource("SpriteFrames_inys8")
 animation = &"PlayerWalkRight"
 frame_progress = 0.648146
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 4)
+scale = Vector2(0.563734, 0.761855)
+shape = SubResource("RectangleShape2D_qu3rw")
+
+[connection signal="area_entered" from="Area2D" to="PlayerStateMachine" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="PlayerStateMachine" method="_on_area_2d_area_exited"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpr0emktiyypd"]
+[gd_scene load_steps=7 format=3 uid="uid://bpr0emktiyypd"]
 
 [ext_resource type="PackedScene" uid="uid://diqjcmvysb5e0" path="res://Scenes/Rooms/bedroom.tscn" id="1_hvf0q"]
 [ext_resource type="PackedScene" uid="uid://dvw6yth2rqx3j" path="res://Scenes/Objects/ghost.tscn" id="2_q0sqo"]
 [ext_resource type="PackedScene" uid="uid://c10nonnehk66w" path="res://Scenes/InvisidbleDoor.tscn" id="2_uf5r0"]
 [ext_resource type="PackedScene" uid="uid://bkq3evnnyql11" path="res://Scenes/Objects/player.tscn" id="3_i4niy"]
 [ext_resource type="PackedScene" uid="uid://jglt73g7b7ky" path="res://Scenes/Rooms/hallway.tscn" id="4_4fjp5"]
+[ext_resource type="PackedScene" uid="uid://dwxyfgahxquo0" path="res://Scenes/Objects/closet.tscn" id="6_s4b2q"]
 
 [node name="MainWorld" type="Node2D"]
 
@@ -12,8 +13,9 @@
 
 [node name="enemies" type="Node" parent="."]
 
-[node name="Ghost" parent="enemies" instance=ExtResource("2_q0sqo")]
-position = Vector2(-560, -58)
+[node name="Ghost" parent="enemies" node_paths=PackedStringArray("current_room") instance=ExtResource("2_q0sqo")]
+position = Vector2(-601, -63)
+current_room = NodePath("../../rooms/Bedroom")
 
 [node name="Player" parent="." instance=ExtResource("3_i4niy")]
 position = Vector2(-692, -94)
@@ -75,3 +77,6 @@ position = Vector2(-64, 27)
 rotation = -1.5708
 flip_v = true
 room = NodePath("../../../Bedroom")
+
+[node name="Closet" parent="." instance=ExtResource("6_s4b2q")]
+position = Vector2(-673, -96)

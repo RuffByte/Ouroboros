@@ -5,7 +5,5 @@ func enter() -> void:
 	player.velocity.y = 0
 
 func physics_update(delta: float) -> void:
-	if !movement_component.get_movement_direction().is_zero_approx():
-		transitioned.emit(self, "PlayerMove")
-		
+	pass
 
