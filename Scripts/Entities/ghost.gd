@@ -12,6 +12,8 @@ var idleTimer: float = 0
 var hasFinishFollowIntoRoom: bool = false
 var isInView : bool = false
 
+@export var assignedLocation: String = "rooms"
+
 var unlockedRoam: bool = true
 @export var current_room: Node2D
 
@@ -48,11 +50,14 @@ func _on_detect_area_body_entered(body) -> void:
 			target = body
 
 func teleport_to_random_room():
-	var rooms:Array = owner.get_node("rooms").get_children()
-	var selected_room_index = (randf() * len(rooms))/1
-	if (current_room  != rooms[selected_room_index]):
-		where_am_i_lol(rooms[selected_room_index])
-		global_position = rooms[selected_room_index].global_position
+	var rooms = owner.get_node_or_null(assignedLocation)
+	if !rooms:
+		return
+	var children:Array = rooms.get_children()
+	var selected_room_index = (randf() * len(children))/1
+	if (current_room  != children[selected_room_index]):
+		where_am_i_lol(children[selected_room_index])
+		global_position = children[selected_room_index].global_position
 	else:
 		teleport_to_random_room()
 
