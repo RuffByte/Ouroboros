@@ -47,3 +47,9 @@ func go_to_room(body: Node2D):
 	var next_room: Node2D = get_closest_door_in_room()
 	var location: Vector2 = get_door_spawn_location(next_room)
 	body.position = location
+	if body is Player:
+		get_viewport().get_camera_2d().position_smoothing_enabled = false
+		await get_tree().create_timer(0.05).timeout
+		get_viewport().get_camera_2d().position_smoothing_enabled = true		
+
+	
