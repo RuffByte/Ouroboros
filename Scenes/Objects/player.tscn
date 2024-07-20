@@ -302,7 +302,7 @@ script = ExtResource("5_wdanq")
 script = ExtResource("4_tpeha")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 rotation_smoothing_enabled = true
@@ -314,10 +314,12 @@ animations = NodePath("../AnimatedSprite2D")
 movement_component = NodePath("../MovementComponent")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
+visible = false
 texture = ExtResource("8_ia8xl")
 texture_scale = 0.09
 
 [node name="Flashlight" type="PointLight2D" parent="."]
+visible = false
 position = Vector2(0, -1)
 texture = ExtResource("10_vfvtv")
 texture_scale = 0.2
@@ -332,4 +334,4 @@ shape = SubResource("RectangleShape2D_mqfsq")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_inys8")
 animation = &"PlayerWalkRight"
-frame_progress = 0.648146
+frame_progress = 0.374172
