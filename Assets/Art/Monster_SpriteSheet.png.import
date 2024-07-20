@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fvtccfj31tug"
-path="res://.godot/imported/Detective_SpriteSheet.png-9a2105b4ed1c7becbf26938fcbfaee91.ctex"
+uid="uid://cxrkwqvthrxpg"
+path="res://.godot/imported/Monster_SpriteSheet.png-de0a2a651003e6c74dd29904e095148a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Detective_SpriteSheet.png"
-dest_files=["res://.godot/imported/Detective_SpriteSheet.png-9a2105b4ed1c7becbf26938fcbfaee91.ctex"]
+source_file="res://Assets/Art/Monster_SpriteSheet.png"
+dest_files=["res://.godot/imported/Monster_SpriteSheet.png-de0a2a651003e6c74dd29904e095148a.ctex"]
 
 [params]
 

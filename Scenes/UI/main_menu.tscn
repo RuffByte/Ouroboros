@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_cnexa")
 script = ExtResource("2_o3brc")
-action_items = Array[String](["move_up", "move_left", "move_down", "move_right"])
+action_items = Array[String](["move_up", "move_left", "move_down", "move_right", "shoot"])
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

@@ -11,7 +11,7 @@ func _physics_process(delta: float) -> void:
 	update_facing_direction()
 		
 	if player.velocity.y == 0 && player.velocity.x == 0:
-		animations.play("PlayerIdle" + player.facing)
+		animations.play("PlayerIdle")
 		return
 	else:
 		animations.play("PlayerWalk" + player.facing)
