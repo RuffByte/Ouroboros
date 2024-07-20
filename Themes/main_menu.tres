@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://drq31mtyljl06"]
+
+[ext_resource type="FontFile" uid="uid://dwox220nbfx7o" path="res://Assets/TempAssets/Sprout Lands - UI Pack - Basic pack/fonts/pixelFont-7-8x14-sproutLands.ttf" id="1_ny4kg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g6ck1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jvy30"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6a665"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bo8fv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5myj1"]
+
+[resource]
+default_font = ExtResource("1_ny4kg")
+Button/colors/font_focus_color = Color(0.972549, 1, 0.137255, 1)
+Button/colors/font_hover_color = Color(0.94902, 0.94902, 0.458824, 1)
+Button/colors/font_pressed_color = Color(0.819608, 0.701961, 0, 1)
+Button/font_sizes/font_size = 32
+Button/styles/disabled = SubResource("StyleBoxEmpty_g6ck1")
+Button/styles/focus = SubResource("StyleBoxEmpty_jvy30")
+Button/styles/hover = SubResource("StyleBoxEmpty_6a665")
+Button/styles/normal = SubResource("StyleBoxEmpty_bo8fv")
+Button/styles/pressed = SubResource("StyleBoxEmpty_5myj1")

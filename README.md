@@ -8,10 +8,10 @@ This is RuffByte's submission for the 2024 Kiwi Jam!
 | ------------------------ | --------------- |
 | Anton Garay              | Project Lead / Developer |
 | Chanasit Jitsawatpaiboon | Systems Designer / Developer       |
-| Lawrence Li          | Project Manager / Generalist|
+| Lawrence Li          | Generalist |
 | Mayo       | Lead Writer / Creative Director
-| Matthew Shing    | Lead Artist       |
-| Winston Wijaya | Artist |
+| Matthew Shing    | Tileset Artist       |
+| Winston Wijaya | Sprite Artist |
 | Ruffy the Dog | Mascot |
 
 ---

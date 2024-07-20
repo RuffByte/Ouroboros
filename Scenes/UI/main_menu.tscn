@@ -1,0 +1,140 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcrkxfkjaikqq"]
+
+[ext_resource type="Theme" uid="uid://drq31mtyljl06" path="res://Themes/main_menu.tres" id="1_cnexa"]
+[ext_resource type="Script" path="res://Scripts/UI/main_menu.gd" id="2_o3brc"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_cnexa")
+script = ExtResource("2_o3brc")
+action_items = Array[String](["move_up", "move_left", "move_down", "move_right"])
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0687983, 0.0687983, 0.0687983, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="MenuVbox" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/MenuVbox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Secrets in the Shadows
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonVbox" type="VBoxContainer" parent="MarginContainer/MenuVbox"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Play" type="Button" parent="MarginContainer/MenuVbox/ButtonVbox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 5
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../Options")
+text = "Play"
+
+[node name="Options" type="Button" parent="MarginContainer/MenuVbox/ButtonVbox"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_bottom = NodePath("../Quit")
+text = "Options"
+
+[node name="Quit" type="Button" parent="MarginContainer/MenuVbox/ButtonVbox"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Options")
+focus_neighbor_bottom = NodePath("../Play")
+text = "Quit
+"
+
+[node name="Settings" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 256
+theme_override_constants/margin_right = 256
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings"]
+layout_mode = 2
+alignment = 1
+
+[node name="SettingsGridContainer" type="GridContainer" parent="Settings/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="MasterLabel" type="Label" parent="Settings/VBoxContainer/SettingsGridContainer"]
+layout_mode = 2
+text = "Master"
+
+[node name="MasterSlider" type="HSlider" parent="Settings/VBoxContainer/SettingsGridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SFXLabel" type="Label" parent="Settings/VBoxContainer/SettingsGridContainer"]
+layout_mode = 2
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="Settings/VBoxContainer/SettingsGridContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="MusicLabel" type="Label" parent="Settings/VBoxContainer/SettingsGridContainer"]
+layout_mode = 2
+text = "MUSIC"
+
+[node name="MusicSlider" type="HSlider" parent="Settings/VBoxContainer/SettingsGridContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Menu" type="Button" parent="Settings/VBoxContainer"]
+layout_mode = 2
+text = "Back
+"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="visibility_changed" from="MarginContainer" to="." method="_on_margin_container_visibility_changed"]
+[connection signal="pressed" from="MarginContainer/MenuVbox/ButtonVbox/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/MenuVbox/ButtonVbox/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/MenuVbox/ButtonVbox/Quit" to="." method="_on_quit_pressed"]
+[connection signal="visibility_changed" from="Settings" to="." method="_on_settings_visibility_changed"]
+[connection signal="value_changed" from="Settings/VBoxContainer/SettingsGridContainer/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="Settings/VBoxContainer/SettingsGridContainer/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="Settings/VBoxContainer/SettingsGridContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="pressed" from="Settings/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
