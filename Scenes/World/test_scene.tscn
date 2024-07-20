@@ -331,7 +331,6 @@ region_enabled = true
 region_rect = Rect2(13.6219, 13.4797, 134.119, 118.6)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]

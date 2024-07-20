@@ -294,9 +294,8 @@ shape = SubResource("RectangleShape2D_ow00k")
 sprite_frames = SubResource("SpriteFrames_iwq23")
 animation = &"MonsterWalkLeft"
 
-[node name="EnemyAnimationController" type="Node2D" parent="." node_paths=PackedStringArray("animations")]
+[node name="EnemyAnimationController" type="Node2D" parent="."]
 script = ExtResource("3_hhc8t")
-animations = NodePath("../AnimatedSprite2D")
 
 [connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
 [connection signal="body_exited" from="DetectArea" to="." method="_on_detect_area_body_exited"]
