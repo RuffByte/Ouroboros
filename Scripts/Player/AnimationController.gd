@@ -9,7 +9,10 @@ func _physics_process(delta: float) -> void:
 	if player.InAction:
 		return
 	update_facing_direction()
-		
+	if player.is_dead:
+		animations.play("PlayerDeath")
+		return
+	
 	if player.velocity.y == 0 && player.velocity.x == 0:
 		animations.play("PlayerIdle")
 		return

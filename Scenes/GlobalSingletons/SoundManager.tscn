@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://da3aihdf10urg"]
+[gd_scene load_steps=4 format=3 uid="uid://da3aihdf10urg"]
 
 [ext_resource type="Script" path="res://Scripts/GlobalSingletons/SoundManager.gd" id="1_rmjwp"]
 [ext_resource type="AudioStream" uid="uid://baycbvv4pk726" path="res://Assets/Audio/Music/1- Midnight Dreams.mp3" id="2_ky5mb"]
+[ext_resource type="AudioStream" uid="uid://b2v5i0qv8hnw2" path="res://Assets/Audio/SFX/308 Single.mp3" id="3_e74ig"]
 
 [node name="SoundManager" type="Node2D"]
 process_mode = 3
@@ -10,3 +11,6 @@ script = ExtResource("1_rmjwp")
 [node name="MidnightDreams" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
 stream = ExtResource("2_ky5mb")
+
+[node name="MagnumShot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_e74ig")

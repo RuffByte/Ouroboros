@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="KiwiJam2024"
-run/main_scene="res://Scenes/World/main_world.tscn"
+run/main_scene="res://Scenes/UI/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -27,6 +27,7 @@ Ui="*res://Scenes/UI/ui.tscn"
 PlayerEvents="*res://player_events.gd"
 GameManager="*res://Scripts/GlobalSingletons/GameManager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Filter="*res://Scenes/GlobalSingletons/FILTER.tscn"
 
 [display]
 
@@ -107,7 +108,7 @@ shoot={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue", "res://dialogue/lockedDoor.dialogue", "res://dialogue/Ammo.dialogue", "res://dialogue/Book of revival.dialogue", "res://dialogue/Book Study.dialogue", "res://dialogue/Guest Room 2 key.dialogue", "res://dialogue/Master Bedroom key.dialogue", "res://dialogue/NewsPaper.dialogue", "res://dialogue/Note guest room.dialogue", "res://dialogue/Note Kitchen.dialogue", "res://dialogue/Note Master Bedroom.dialogue", "res://dialogue/Notebook Ouroboros.dialogue", "res://dialogue/Picture boy.dialogue", "res://dialogue/Study Room Key.dialogue", "res://dialogue/Study Secret Room.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue", "res://dialogue/lockedDoor.dialogue", "res://dialogue/DONTSHOOT.dialogue", "res://dialogue/gameEnd.dialogue", "res://dialogue/Ammo.dialogue", "res://dialogue/Book of revival.dialogue", "res://dialogue/Book Study.dialogue", "res://dialogue/Guest Room 2 key.dialogue", "res://dialogue/Master Bedroom key.dialogue", "res://dialogue/NewsPaper.dialogue", "res://dialogue/Note guest room.dialogue", "res://dialogue/Note Kitchen.dialogue", "res://dialogue/Note Master Bedroom.dialogue", "res://dialogue/Notebook Ouroboros.dialogue", "res://dialogue/Picture boy.dialogue", "res://dialogue/Study Room Key.dialogue", "res://dialogue/Study Secret Room.dialogue")
 
 [physics]
 

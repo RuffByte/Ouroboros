@@ -58,7 +58,7 @@ position = Vector2(88, 232)
 assignedLocation = "room f2"
 
 [node name="Player" parent="." instance=ExtResource("3_i4niy")]
-position = Vector2(-979, -375)
+position = Vector2(-1343, 220)
 
 [node name="rooms" type="Node" parent="."]
 
@@ -184,24 +184,6 @@ position = Vector2(0, 65)
 rotation = -3.14159
 room = NodePath("../../../Study Room")
 
-[node name="TRIGGEREND" type="Node2D" parent="rooms"]
-position = Vector2(-466, 1209)
-
-[node name="Area2D" type="Area2D" parent="rooms/TRIGGEREND"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="rooms/TRIGGEREND/Area2D"]
-shape = SubResource("RectangleShape2D_v0h11")
-
-[node name="doors" type="Node2D" parent="rooms/TRIGGEREND"]
-position = Vector2(13, 16)
-scale = Vector2(0.640002, 0.640002)
-
-[node name="Door2" parent="rooms/TRIGGEREND/doors" instance=ExtResource("2_uf5r0")]
-position = Vector2(-21.7132, -25.533)
-rotation = -1.5708
-scale = Vector2(0.125004, 2.75001)
-room = NodePath("")
-
 [node name="Closet" parent="." instance=ExtResource("6_s4b2q")]
 z_index = 2
 position = Vector2(-818, -91)
@@ -299,7 +281,7 @@ position = Vector2(-380, 8)
 [node name="doors" type="Node2D" parent="room 2f/CuckRoom"]
 
 [node name="Door" parent="room 2f/CuckRoom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
-position = Vector2(-39, -66)
+position = Vector2(-55, -66)
 room = NodePath("../../../2F Main")
 item_required = "test"
 
@@ -377,5 +359,23 @@ position = Vector2(-1073, -96)
 [node name="Door" parent="." node_paths=PackedStringArray("room") instance=ExtResource("34_3ldd4")]
 position = Vector2(-1957, 9)
 scale = Vector2(1.48, 13.8133)
-room = NodePath("../rooms/TRIGGEREND")
+room = NodePath("../TRIGGEREND")
 item_required = "Book of revival"
+
+[node name="TRIGGEREND" type="Node2D" parent="."]
+position = Vector2(-2042, 1209)
+
+[node name="Area2D" type="Area2D" parent="TRIGGEREND"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TRIGGEREND/Area2D"]
+shape = SubResource("RectangleShape2D_v0h11")
+
+[node name="doors" type="Node2D" parent="TRIGGEREND"]
+position = Vector2(13, 16)
+scale = Vector2(0.640002, 0.640002)
+
+[node name="Door2" parent="TRIGGEREND/doors" instance=ExtResource("2_uf5r0")]
+position = Vector2(-21.7132, -25.533)
+rotation = -1.5708
+scale = Vector2(0.125004, 2.75001)
+room = NodePath("")

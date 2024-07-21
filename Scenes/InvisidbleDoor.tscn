@@ -56,7 +56,6 @@ dialogue_resource = ExtResource("3_7ire8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="if locked/PickupArea2" index="0"]
 position = Vector2(0, 0.485132)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3hhln")
 
 [connection signal="body_entered" from="if locked/PickupArea2" to="." method="_on_pickup_area_2_body_entered"]

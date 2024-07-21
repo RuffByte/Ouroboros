@@ -29,6 +29,6 @@ region_enabled = true
 region_rect = Rect2(0, 33.1106, 256, 126.89)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(0, -16)
+position = Vector2(-1, -15)
 blend_mode = 2
 texture = ExtResource("3_u856n")
