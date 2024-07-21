@@ -15,10 +15,10 @@ colors = PackedColorArray(1, 1, 1, 1)
 gradient = SubResource("Gradient_c1j2q")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_07flq"]
-size = Vector2(32, 0.2)
+size = Vector2(38, 0.4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hhln"]
-size = Vector2(32, 0.8)
+size = Vector2(23.3051, 1.83272)
 
 [node name="Door" instance=ExtResource("1_a81pq")]
 position = Vector2(0, 0)
@@ -50,11 +50,12 @@ shape = SubResource("RectangleShape2D_07flq")
 
 [node name="PickupArea2" parent="if locked" index="2" node_paths=PackedStringArray("sprite") instance=ExtResource("2_et00o")]
 position = Vector2(0, -0.4)
+scale = Vector2(1.888, 1.85516)
 sprite = NodePath("../Sprite2D")
 dialogue_resource = ExtResource("3_7ire8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="if locked/PickupArea2" index="0"]
-position = Vector2(0, 0.6)
+position = Vector2(0, 0.485132)
 shape = SubResource("RectangleShape2D_3hhln")
 
 [connection signal="body_entered" from="if locked/PickupArea2" to="." method="_on_pickup_area_2_body_entered"]

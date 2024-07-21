@@ -11,6 +11,10 @@ region_rect = Rect2(496, 128, 16, 16)
 [node name="PickupArea" parent="." index="0"]
 dialogue_resource = ExtResource("2_mk3dt")
 added_item = "Book of revival"
+is_pick_up = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
 shape = SubResource("RectangleShape2D_8g0qc")
+
+[connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]
+[connection signal="body_exited" from="PickupArea" to="PickupArea" method="_on_body_exited"]
