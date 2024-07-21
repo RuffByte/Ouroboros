@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://7lhu0gl0fi47"]
+
+[ext_resource type="PackedScene" uid="uid://bjmyailn2bkyk" path="res://Scenes/pickupitems/template_item.tscn" id="1_kh3qf"]
+[ext_resource type="Resource" uid="uid://20hnxe0ylerc" path="res://dialogue/Ammo.dialogue" id="2_1o2hb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56qen"]
+size = Vector2(20, 71)
+
+[node name="Ammo" instance=ExtResource("1_kh3qf")]
+region_rect = Rect2(528, 48, 16, 56)
+
+[node name="PickupArea" parent="." index="0"]
+dialogue_resource = ExtResource("2_1o2hb")
+added_item = "Ammo"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
+position = Vector2(0, 7.5)
+shape = SubResource("RectangleShape2D_56qen")

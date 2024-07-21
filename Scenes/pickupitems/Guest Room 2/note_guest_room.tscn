@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbhus86jvfvcl"]
+
+[ext_resource type="PackedScene" uid="uid://bjmyailn2bkyk" path="res://Scenes/pickupitems/template_item.tscn" id="1_30nfg"]
+[ext_resource type="Resource" uid="uid://bi10d1nypgq60" path="res://dialogue/Note guest room.dialogue" id="2_s0pje"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2b8p"]
+
+[node name="Note Guest room" instance=ExtResource("1_30nfg")]
+region_rect = Rect2(448, 192, 16, 16)
+
+[node name="PickupArea" parent="." index="0"]
+dialogue_resource = ExtResource("2_s0pje")
+added_item = "Note guest room"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
+shape = SubResource("RectangleShape2D_h2b8p")

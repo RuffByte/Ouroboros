@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://2515y12um2bq"
+path="res://.godot/imported/Note Master Bedroom.dialogue-e4f336dee228546fa76fbe4548092736.tres"
+
+[deps]
+
+source_file="res://dialogue/Note Master Bedroom.dialogue"
+dest_files=["res://.godot/imported/Note Master Bedroom.dialogue-e4f336dee228546fa76fbe4548092736.tres"]
+
+[params]
+
+defaults=true

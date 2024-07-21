@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cnji81etaf2lm"
+path="res://.godot/imported/Book of revival.dialogue-99003d1932ae0ba9be2e6c7ea7d1f83b.tres"
+
+[deps]
+
+source_file="res://dialogue/Book of revival.dialogue"
+dest_files=["res://.godot/imported/Book of revival.dialogue-99003d1932ae0ba9be2e6c7ea7d1f83b.tres"]
+
+[params]
+
+defaults=true

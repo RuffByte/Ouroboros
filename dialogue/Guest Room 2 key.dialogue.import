@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cq3d4832kegux"
+path="res://.godot/imported/Guest Room 2 key.dialogue-df5972db21422a6a623155f78b557de8.tres"
+
+[deps]
+
+source_file="res://dialogue/Guest Room 2 key.dialogue"
+dest_files=["res://.godot/imported/Guest Room 2 key.dialogue-df5972db21422a6a623155f78b557de8.tres"]
+
+[params]
+
+defaults=true

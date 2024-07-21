@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5rrn1yamov00"]
+
+[ext_resource type="PackedScene" uid="uid://bjmyailn2bkyk" path="res://Scenes/pickupitems/template_item.tscn" id="1_luauu"]
+[ext_resource type="Texture2D" uid="uid://b5rjaf0v1ki32" path="res://Assets/Art/Tileset 3.1.png" id="2_fvdl4"]
+[ext_resource type="Resource" uid="uid://cq3d4832kegux" path="res://dialogue/Guest Room 2 key.dialogue" id="3_03knb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwy66"]
+
+[node name="Key guest room 2" instance=ExtResource("1_luauu")]
+texture = ExtResource("2_fvdl4")
+region_enabled = true
+region_rect = Rect2(496, 192, 16, 16)
+
+[node name="PickupArea" parent="." index="0"]
+dialogue_resource = ExtResource("3_03knb")
+added_item = "Key guest room 2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
+shape = SubResource("RectangleShape2D_pwy66")

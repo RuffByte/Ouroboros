@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://dfvfovifd3n7u"
+path="res://.godot/imported/NewsPaper.dialogue-a57413137960ce9d31f06ea97bf75ebb.tres"
+
+[deps]
+
+source_file="res://dialogue/NewsPaper.dialogue"
+dest_files=["res://.godot/imported/NewsPaper.dialogue-a57413137960ce9d31f06ea97bf75ebb.tres"]
+
+[params]
+
+defaults=true

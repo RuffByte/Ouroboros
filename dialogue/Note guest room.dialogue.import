@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bi10d1nypgq60"
+path="res://.godot/imported/Note guest room.dialogue-08bde9aa5e3be55d2de59763fb97e06b.tres"
+
+[deps]
+
+source_file="res://dialogue/Note guest room.dialogue"
+dest_files=["res://.godot/imported/Note guest room.dialogue-08bde9aa5e3be55d2de59763fb97e06b.tres"]
+
+[params]
+
+defaults=true

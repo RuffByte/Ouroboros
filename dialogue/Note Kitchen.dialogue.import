@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://52sgw31tt8po"
+path="res://.godot/imported/Note Kitchen.dialogue-dafb85775b4dbf0e5535ec31f5d2b89c.tres"
+
+[deps]
+
+source_file="res://dialogue/Note Kitchen.dialogue"
+dest_files=["res://.godot/imported/Note Kitchen.dialogue-dafb85775b4dbf0e5535ec31f5d2b89c.tres"]
+
+[params]
+
+defaults=true

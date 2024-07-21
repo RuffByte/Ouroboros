@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://dwrnxrnpcnhag"
+path="res://.godot/imported/Notebook Ouroboros.dialogue-d625f06491b2293a89d3387622f0053e.tres"
+
+[deps]
+
+source_file="res://dialogue/Notebook Ouroboros.dialogue"
+dest_files=["res://.godot/imported/Notebook Ouroboros.dialogue-d625f06491b2293a89d3387622f0053e.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://tgmhkjjmxj7x"]
+
+[ext_resource type="PackedScene" uid="uid://bjmyailn2bkyk" path="res://Scenes/pickupitems/template_item.tscn" id="1_huepq"]
+[ext_resource type="Resource" uid="uid://cy4eue10mmjrq" path="res://dialogue/Picture boy.dialogue" id="2_gf2wo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3y1ot"]
+
+[node name="Picture boy" instance=ExtResource("1_huepq")]
+region_rect = Rect2(560, 80, 16, 16)
+
+[node name="PickupArea" parent="." index="0"]
+dialogue_resource = ExtResource("2_gf2wo")
+added_item = "Picture boy"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
+shape = SubResource("RectangleShape2D_3y1ot")

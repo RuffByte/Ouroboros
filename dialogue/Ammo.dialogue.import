@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://20hnxe0ylerc"
+path="res://.godot/imported/Ammo.dialogue-05d2ded47ffd4350651dddcc1372faa7.tres"
+
+[deps]
+
+source_file="res://dialogue/Ammo.dialogue"
+dest_files=["res://.godot/imported/Ammo.dialogue-05d2ded47ffd4350651dddcc1372faa7.tres"]
+
+[params]
+
+defaults=true
