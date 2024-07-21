@@ -326,10 +326,12 @@ animations = NodePath("../AnimatedSprite2D")
 movement_component = NodePath("../MovementComponent")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
+visible = false
 texture = ExtResource("8_ia8xl")
 texture_scale = 0.09
 
 [node name="Flashlight" type="PointLight2D" parent="."]
+visible = false
 position = Vector2(-2.08165e-12, -13)
 texture = ExtResource("10_vfvtv")
 texture_scale = 0.2

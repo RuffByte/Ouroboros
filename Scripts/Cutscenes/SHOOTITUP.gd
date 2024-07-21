@@ -1,8 +1,8 @@
 extends Node2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-const GAME_END = preload("res://dialogue/gameEnd.dialogue")
-const DONTSHOOT = preload("res://dialogue/DONTSHOOT.dialogue")
+const GAME_END = preload ("res://dialogue/gameEnd.dialogue")
+const DONTSHOOT = preload ("res://dialogue/DONTSHOOT.dialogue")
 var playing: bool = false
 var end: bool = false
 # Called when the node enters the scene tree for the first time.
@@ -31,4 +31,3 @@ func on_finish() -> void:
 		TransitionManager.change_scene("res://Scenes/World/main_world.tscn")
 	else:
 		get_tree().quit()
-	

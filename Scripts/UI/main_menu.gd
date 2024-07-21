@@ -28,7 +28,7 @@ func _on_quit_pressed() -> void:
 	get_tree().quit()
 
 func _on_play_pressed() -> void:
-	TransitionManager.change_scene("res://Scenes/Cutscenes/SHOOTITUP.tscn")
+	TransitionManager.change_scene("res://Scenes/World/main_world_2.tscn")
 	Ui.visible = false
 	Ui.update_slider()
 	Filter.visible = true

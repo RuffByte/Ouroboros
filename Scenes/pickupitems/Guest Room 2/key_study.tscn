@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://3a8vcityfhnl" path="res://dialogue/Study Room Key.dialogue" id="2_g5ptb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa3ax"]
+size = Vector2(60, 58)
 
 [node name="Key study" instance=ExtResource("1_cwio8")]
 region_rect = Rect2(512, 144, 16, 16)
@@ -11,6 +12,10 @@ region_rect = Rect2(512, 144, 16, 16)
 [node name="PickupArea" parent="." index="0"]
 dialogue_resource = ExtResource("2_g5ptb")
 added_item = "Key study"
+is_pick_up = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
 shape = SubResource("RectangleShape2D_sa3ax")
+
+[connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]
+[connection signal="body_exited" from="PickupArea" to="PickupArea" method="_on_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bpr0emktiyypd"]
+[gd_scene load_steps=20 format=3 uid="uid://b4ibtq3jdh1d1"]
 
 [ext_resource type="PackedScene" uid="uid://dvw6yth2rqx3j" path="res://Scenes/Objects/ghost.tscn" id="2_q0sqo"]
 [ext_resource type="PackedScene" uid="uid://c10nonnehk66w" path="res://Scenes/InvisidbleDoor.tscn" id="2_uf5r0"]

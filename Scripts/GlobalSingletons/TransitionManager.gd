@@ -9,7 +9,7 @@ func _ready() -> void:
 func change_scene(scene: String) -> void:
 	color_rect.visible = true
 	$AnimationPlayer.play("transition")
-	get_tree().change_scene_to_file(scene)	
+	get_tree().change_scene_to_file(scene)
 	await $AnimationPlayer.animation_finished
 	$AnimationPlayer.play_backwards("transition")
 	color_rect.visible = false
