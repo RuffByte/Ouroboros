@@ -29,7 +29,7 @@ func _on_quit_pressed() -> void:
 
 func _on_play_pressed() -> void:
 	TransitionManager.change_scene("res://Scenes/Cutscenes/SHOOTITUP.tscn")
-	Ui.visible = true
+	Ui.visible = false
 	Ui.update_slider()
 	Filter.visible = true
 
