@@ -174,7 +174,7 @@ item_required = "test"
 [node name="Door4" parent="room 2f/2F Main/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
 position = Vector2(0, 16)
 rotation = 1.57079
-room = NodePath("../../../Mater Bedroom Bathroom")
+room = NodePath("../../../../Stairs")
 item_required = "test"
 
 [node name="Master Bedroom" parent="room 2f" instance=ExtResource("13_h50ml")]
