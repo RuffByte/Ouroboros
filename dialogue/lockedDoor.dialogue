@@ -1,0 +1,6 @@
+~ start
+
+...: This door is locked.
+
+- a locked door => END
+=> END

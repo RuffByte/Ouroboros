@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjqvxxruvleia"]
+
+[ext_resource type="TileSet" uid="uid://ctt0r2cw5vs07" path="res://Scenes/Rooms/Main Tileset.tres" id="1_305uk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ua6u"]
+size = Vector2(33, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sewv3"]
+size = Vector2(63.5, 2.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1i78"]
+size = Vector2(2, 65)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_305uk")
+format = 2
+layer_0/name = "Base"
+layer_0/tile_data = PackedInt32Array(131072, 983043, 3, 65537, 1114115, 2, 131073, 1114115, 3, -65536, 983043, 1, 0, 983043, 2, -65535, 1114115, 1, 1, 1114115, 2, 65536, 983043, 2, 131070, 655360, 6, 196606, 655360, 5, 131071, 720896, 6, 196607, 720896, 5, -2, 655360, 6, 65534, 655360, 5, -1, 720896, 6, 65535, 720896, 5, -65538, 655360, 4, -65537, 655360, 4, -131073, 655360, 3, -196608, 720896, 3, -131072, 720896, 4, -196607, 786432, 3, -131071, 786432, 4, -131074, 655360, 3)
+layer_1/name = "Overlay"
+layer_1/tile_data = PackedInt32Array()
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-18.5, 16)
+shape = SubResource("RectangleShape2D_4ua6u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 47.75)
+shape = SubResource("RectangleShape2D_sewv3")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_sewv3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(31, 15.5)
+shape = SubResource("RectangleShape2D_b1i78")

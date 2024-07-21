@@ -1,12 +1,17 @@
 extends Sprite2D
 
 @export var room: Node2D
-
+@onready var lock = $"if locked"
+var is_locked: bool
+@export var item_required: String
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if room:
 		print("need a room")
-	pass
+	if item_required:
+		is_locked = true
+	else:
+		lock.queue_free()
 	
 func get_closest_door_in_room() -> Node2D:
 	var doors = room.get_node("doors").get_children()
@@ -24,7 +29,6 @@ func get_door_spawn_location(door) -> Vector2:
 	return door.get_node("playerSpawnLocation").global_position
 	
 func _on_area_2d_body_entered(body):
-	print("enter")
 	if !room:
 		return
 	if body is Player:
@@ -46,10 +50,13 @@ func _on_area_2d_body_entered(body):
 func go_to_room(body: Node2D):
 	var next_room: Node2D = get_closest_door_in_room()
 	var location: Vector2 = get_door_spawn_location(next_room)
-	body.position = location
+	body.global_position = location
 	if body is Player:
 		get_viewport().get_camera_2d().position_smoothing_enabled = false
 		await get_tree().create_timer(0.05).timeout
 		get_viewport().get_camera_2d().position_smoothing_enabled = true		
 
-	
+func _on_pickup_area_2_body_entered(body):
+	if body is Player:
+		if GameManager.check_item(item_required):
+			lock.queue_free()

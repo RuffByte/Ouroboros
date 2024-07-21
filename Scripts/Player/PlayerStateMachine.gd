@@ -15,7 +15,7 @@ func _ready() -> void:
 	if initial_state:
 		initial_state.enter()
 		current_state = initial_state
-	animation.play("PlayerIdleRight")
+	animation.play("PlayerIdle")
 		
 func _process(delta):
 	if can_hide and Input.is_action_just_pressed("interact"):
