@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://drk1v8wbnkjp3"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_ieuvj"]
+
+[node name="Starting Cutscene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Camera2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = SubResource("VideoStreamTheora_ieuvj")

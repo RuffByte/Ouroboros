@@ -240,7 +240,7 @@ position = Vector2(-305, 425)
 [node name="doors" type="Node2D" parent="room 2f/CuckRoom"]
 
 [node name="Door" parent="room 2f/CuckRoom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
-position = Vector2(-39, -66)
+position = Vector2(-55, -66)
 room = NodePath("../../../2F Main")
 item_required = "test"
 
