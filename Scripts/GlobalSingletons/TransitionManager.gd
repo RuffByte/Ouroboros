@@ -20,3 +20,8 @@ func flash_screen() -> void:
 	await $AnimationPlayer.animation_finished
 	$AnimationPlayer.play_backwards("transition")
 	flash.visible = false
+
+func end_game() -> void:
+	flash.visible = true
+	$AnimationPlayer.play("END-GAME")
+	get_tree().quit()
