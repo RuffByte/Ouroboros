@@ -55,7 +55,7 @@ position = Vector2(334, 230)
 [node name="Ghost2" parent="enemies" instance=ExtResource("2_q0sqo")]
 z_index = 5
 position = Vector2(88, 232)
-assignedLocation = "room f2"
+assignedLocation = "room 2f"
 
 [node name="Player" parent="." instance=ExtResource("3_i4niy")]
 position = Vector2(-1169, -43)
