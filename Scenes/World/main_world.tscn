@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bpr0emktiyypd"]
+[gd_scene load_steps=37 format=3 uid="uid://bpr0emktiyypd"]
 
 [ext_resource type="PackedScene" uid="uid://dvw6yth2rqx3j" path="res://Scenes/Objects/ghost.tscn" id="2_q0sqo"]
 [ext_resource type="PackedScene" uid="uid://c10nonnehk66w" path="res://Scenes/InvisidbleDoor.tscn" id="2_uf5r0"]
@@ -33,9 +33,13 @@
 [ext_resource type="PackedScene" uid="uid://b5rrn1yamov00" path="res://Scenes/pickupitems/Garage/key_guest_room_2.tscn" id="30_hyx15"]
 [ext_resource type="PackedScene" uid="uid://7lhu0gl0fi47" path="res://Scenes/pickupitems/Garage/ammo.tscn" id="31_a5eoe"]
 [ext_resource type="PackedScene" uid="uid://o1kmnhs4u3dr" path="res://Scenes/hiddenDoor.tscn" id="32_qngot"]
+[ext_resource type="PackedScene" uid="uid://ccqb2pb6j6gk6" path="res://Scenes/pentagramdoor.tscn" id="34_3ldd4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h62nc"]
 size = Vector2(98, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0h11"]
+size = Vector2(334, 244)
 
 [node name="MainWorld" type="Node2D"]
 position = Vector2(1576, 0)
@@ -179,6 +183,24 @@ position = Vector2(431, -1002)
 position = Vector2(0, 65)
 rotation = -3.14159
 room = NodePath("../../../Study Room")
+
+[node name="TRIGGEREND" type="Node2D" parent="rooms"]
+position = Vector2(-466, 1209)
+
+[node name="Area2D" type="Area2D" parent="rooms/TRIGGEREND"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rooms/TRIGGEREND/Area2D"]
+shape = SubResource("RectangleShape2D_v0h11")
+
+[node name="doors" type="Node2D" parent="rooms/TRIGGEREND"]
+position = Vector2(13, 16)
+scale = Vector2(0.640002, 0.640002)
+
+[node name="Door2" parent="rooms/TRIGGEREND/doors" instance=ExtResource("2_uf5r0")]
+position = Vector2(-21.7132, -25.533)
+rotation = -1.5708
+scale = Vector2(0.125004, 2.75001)
+room = NodePath("")
 
 [node name="Closet" parent="." instance=ExtResource("6_s4b2q")]
 z_index = 2
@@ -351,3 +373,9 @@ position = Vector2(-1226, -46)
 [node name="Ammo" parent="." instance=ExtResource("31_a5eoe")]
 z_index = 4
 position = Vector2(-1073, -96)
+
+[node name="Door" parent="." node_paths=PackedStringArray("room") instance=ExtResource("34_3ldd4")]
+position = Vector2(-1957, 9)
+scale = Vector2(1.48, 13.8133)
+room = NodePath("../rooms/TRIGGEREND")
+item_required = "Book of revival"
