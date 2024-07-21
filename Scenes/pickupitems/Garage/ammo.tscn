@@ -9,8 +9,7 @@ size = Vector2(20, 71)
 [node name="Ammo" instance=ExtResource("1_kh3qf")]
 region_rect = Rect2(528, 48, 16, 56)
 
-[node name="PickupArea" parent="." index="0" node_paths=PackedStringArray("sprite")]
-sprite = NodePath("..")
+[node name="PickupArea" parent="." index="0"]
 dialogue_resource = ExtResource("2_1o2hb")
 added_item = "Ammo"
 

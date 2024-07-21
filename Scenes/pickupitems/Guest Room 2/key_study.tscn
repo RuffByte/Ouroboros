@@ -12,6 +12,7 @@ region_rect = Rect2(512, 144, 16, 16)
 [node name="PickupArea" parent="." index="0"]
 dialogue_resource = ExtResource("2_g5ptb")
 added_item = "Key study"
+is_pick_up = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
 shape = SubResource("RectangleShape2D_sa3ax")

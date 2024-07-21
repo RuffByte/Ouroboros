@@ -8,10 +8,10 @@
 [node name="Book of revival" instance=ExtResource("1_8uhte")]
 region_rect = Rect2(496, 128, 16, 16)
 
-[node name="PickupArea" parent="." index="0" node_paths=PackedStringArray("sprite")]
-sprite = NodePath("..")
+[node name="PickupArea" parent="." index="0"]
 dialogue_resource = ExtResource("2_mk3dt")
 added_item = "Book of revival"
+is_pick_up = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
 shape = SubResource("RectangleShape2D_8g0qc")
