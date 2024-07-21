@@ -58,7 +58,7 @@ position = Vector2(88, 232)
 assignedLocation = "room 2f"
 
 [node name="Player" parent="." instance=ExtResource("3_i4niy")]
-position = Vector2(-1169, -43)
+position = Vector2(-806, 30)
 
 [node name="rooms" type="Node" parent="."]
 
@@ -100,7 +100,7 @@ position = Vector2(0, 41)
 shape = SubResource("RectangleShape2D_h62nc")
 
 [node name="Garage" parent="rooms" instance=ExtResource("7_jsd8p")]
-position = Vector2(431, -12)
+position = Vector2(220, 15)
 
 [node name="doors" type="Node2D" parent="rooms/Garage"]
 
@@ -350,11 +350,11 @@ position = Vector2(-633, 408)
 
 [node name="Key guest room 2" parent="." instance=ExtResource("30_hyx15")]
 z_index = 4
-position = Vector2(-1226, -46)
+position = Vector2(-1437, -19)
 
 [node name="Ammo" parent="." instance=ExtResource("31_a5eoe")]
 z_index = 4
-position = Vector2(-1073, -96)
+position = Vector2(-1284, -69)
 
 [node name="Door" parent="." node_paths=PackedStringArray("room") instance=ExtResource("34_3ldd4")]
 position = Vector2(-1957, 9)
