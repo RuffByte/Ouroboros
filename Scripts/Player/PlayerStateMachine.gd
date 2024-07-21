@@ -34,4 +34,6 @@ func _on_area_2d_area_exited(area):
 	if area.get_parent() is Closet:
 		can_hide = false
 
-
+func _on_area_2d_body_entered(body):
+	if body is Enemy:
+		on_child_transition(current_state, "playerdeath")
