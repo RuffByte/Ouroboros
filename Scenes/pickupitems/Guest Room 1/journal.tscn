@@ -9,14 +9,10 @@ size = Vector2(14, 16)
 [node name="Journal" instance=ExtResource("1_p77dw")]
 region_rect = Rect2(496, 128, 16, 16)
 
-[node name="PickupArea" parent="." index="0" node_paths=PackedStringArray("sprite")]
-sprite = NodePath("..")
+[node name="PickupArea" parent="." index="0"]
 dialogue_resource = ExtResource("2_chqgh")
 added_item = "Journal"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
 position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_vmqld")
-
-[connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]
-[connection signal="body_exited" from="PickupArea" to="PickupArea" method="_on_body_exited"]

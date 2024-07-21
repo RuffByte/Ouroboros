@@ -8,13 +8,9 @@
 [node name="Note Kitchen" instance=ExtResource("1_w0eva")]
 region_rect = Rect2(448, 192, 16, 16)
 
-[node name="PickupArea" parent="." index="0" node_paths=PackedStringArray("sprite")]
-sprite = NodePath("..")
+[node name="PickupArea" parent="." index="0"]
 dialogue_resource = ExtResource("2_u8ntc")
 added_item = "note Kitchen"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
 shape = SubResource("RectangleShape2D_cjnwx")
-
-[connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]
-[connection signal="body_exited" from="PickupArea" to="PickupArea" method="_on_body_exited"]

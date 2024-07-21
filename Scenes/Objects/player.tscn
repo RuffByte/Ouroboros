@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://bkq3evnnyql11"]
+[gd_scene load_steps=50 format=3 uid="uid://bkq3evnnyql11"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_suhjh"]
 [ext_resource type="Script" path="res://Scripts/Player/PlayerStateMachine.gd" id="3_u6w7i"]
@@ -12,26 +12,9 @@
 [ext_resource type="Script" path="res://Scenes/Objects/Flashlight.gd" id="9_l0hti"]
 [ext_resource type="Texture2D" uid="uid://fvtccfj31tug" path="res://Assets/Art/Detective_SpriteSheet.png" id="10_mw5ol"]
 [ext_resource type="Texture2D" uid="uid://cm81x183buaw8" path="res://Assets/cone_2.0.png" id="10_vfvtv"]
-[ext_resource type="Texture2D" uid="uid://c3xwcqswk0ujw" path="res://Assets/Art/remaster.png" id="12_gwisk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ny15s"]
-radius = 5.5
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mievk"]
-atlas = ExtResource("12_gwisk")
-region = Rect2(0, 416, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jewck"]
-atlas = ExtResource("12_gwisk")
-region = Rect2(32, 416, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oux61"]
-atlas = ExtResource("12_gwisk")
-region = Rect2(64, 416, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tr8na"]
-atlas = ExtResource("12_gwisk")
-region = Rect2(96, 416, 32, 32)
+radius = 7.56637
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8cs4p"]
 atlas = ExtResource("10_mw5ol")
@@ -173,23 +156,6 @@ region = Rect2(224, 64, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mievk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jewck")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oux61")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tr8na")
-}],
-"loop": false,
-"name": &"PlayerDeath",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_8cs4p")
 }, {
 "duration": 1.0,
@@ -317,7 +283,6 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fm6t5"]
-size = Vector2(32, 30)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
@@ -380,8 +345,8 @@ position = Vector2(0, -13)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_inys8")
-animation = &"PlayerDeath"
-autoplay = "PlayerIdle"
+animation = &"PlayerWalkRight"
+frame_progress = 0.374172
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, -13)

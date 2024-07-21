@@ -5,4 +5,4 @@ class_name Player
 @onready var InAction: bool = false
 
 var is_hiding: bool = false
-var is_dead: bool = false
+

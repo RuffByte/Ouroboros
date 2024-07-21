@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://db215aestvljf" path="res://Assets/Art/Tileset 3.0.png" id="2_owvu7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m4y52"]
-size = Vector2(13.7711, 11.0284)
+size = Vector2(20, 20.2188)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6pog"]
 size = Vector2(48, 31)
@@ -15,7 +15,7 @@ script = ExtResource("1_prgu5")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -5.99999)
+position = Vector2(0, 4)
 scale = Vector2(3.34033, 2.17619)
 shape = SubResource("RectangleShape2D_m4y52")
 

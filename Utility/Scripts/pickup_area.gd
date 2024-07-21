@@ -7,7 +7,6 @@ class_name PickupArea
 @export var added_item: String
 var item_added : bool = false
 var in_area : bool = false
-@export var is_pick_up: bool = false 
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
@@ -33,9 +32,6 @@ func _process(delta: float) -> void:
 		if !item_added and added_item:
 			GameManager.add_item(added_item)
 			item_added = true
-	
-		if is_pick_up:
-			owner.queue_free()
 	
 		
 func dialogue() -> void:

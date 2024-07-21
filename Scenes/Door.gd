@@ -6,8 +6,8 @@ var is_locked: bool
 @export var item_required: String
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if !room:
-		print("need a room", self, self.get_parent().get_parent())
+	if room:
+		print("need a room")
 	if item_required:
 		is_locked = true
 	else:
