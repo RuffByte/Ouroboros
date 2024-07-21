@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgax0ijq1wp6j"]
+
+[ext_resource type="PackedScene" uid="uid://bjmyailn2bkyk" path="res://Scenes/pickupitems/template_item.tscn" id="1_mu0op"]
+[ext_resource type="Resource" uid="uid://c1mif4y47mxm8" path="res://dialogue/Book Study.dialogue" id="2_l2nv5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6qe5k"]
+size = Vector2(12, 15)
+
+[node name="Book study" instance=ExtResource("1_mu0op")]
+region_rect = Rect2(448, 128, 16, 16)
+
+[node name="PickupArea" parent="." index="0"]
+dialogue_resource = ExtResource("2_l2nv5")
+added_item = "book study"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_6qe5k")

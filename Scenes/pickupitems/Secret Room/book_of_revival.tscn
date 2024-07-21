@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs8doygr2njnw"]
+
+[ext_resource type="PackedScene" uid="uid://bjmyailn2bkyk" path="res://Scenes/pickupitems/template_item.tscn" id="1_8uhte"]
+[ext_resource type="Resource" uid="uid://cnji81etaf2lm" path="res://dialogue/Book of revival.dialogue" id="2_mk3dt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8g0qc"]
+
+[node name="Book of revival" instance=ExtResource("1_8uhte")]
+region_rect = Rect2(496, 128, 16, 16)
+
+[node name="PickupArea" parent="." index="0"]
+dialogue_resource = ExtResource("2_mk3dt")
+added_item = "Book of revival"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
+shape = SubResource("RectangleShape2D_8g0qc")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://1108qk3cmv3b"]
+
+[ext_resource type="PackedScene" uid="uid://bjmyailn2bkyk" path="res://Scenes/pickupitems/template_item.tscn" id="1_b52ri"]
+[ext_resource type="Resource" uid="uid://c37mi0qqbq4e" path="res://dialogue/Master Bedroom key.dialogue" id="2_x17sn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_32m3q"]
+
+[node name="Key Master bedroom" instance=ExtResource("1_b52ri")]
+region_rect = Rect2(512, 192, 16, 16)
+
+[node name="PickupArea" parent="." index="0"]
+dialogue_resource = ExtResource("2_x17sn")
+added_item = "Key Master bedroom"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
+shape = SubResource("RectangleShape2D_32m3q")

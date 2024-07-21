@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://c37mi0qqbq4e"
+path="res://.godot/imported/Master Bedroom key.dialogue-e085345034d4b1bff351bb7fe63178d0.tres"
+
+[deps]
+
+source_file="res://dialogue/Master Bedroom key.dialogue"
+dest_files=["res://.godot/imported/Master Bedroom key.dialogue-e085345034d4b1bff351bb7fe63178d0.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cy4eue10mmjrq"
+path="res://.godot/imported/Picture boy.dialogue-8783891ecb9aea722b3e7fb826feac13.tres"
+
+[deps]
+
+source_file="res://dialogue/Picture boy.dialogue"
+dest_files=["res://.godot/imported/Picture boy.dialogue-8783891ecb9aea722b3e7fb826feac13.tres"]
+
+[params]
+
+defaults=true

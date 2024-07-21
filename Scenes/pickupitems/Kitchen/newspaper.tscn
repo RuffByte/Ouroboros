@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ruldpnllgd1y"]
+
+[ext_resource type="PackedScene" uid="uid://bjmyailn2bkyk" path="res://Scenes/pickupitems/template_item.tscn" id="1_cp4vt"]
+[ext_resource type="Resource" uid="uid://dfvfovifd3n7u" path="res://dialogue/NewsPaper.dialogue" id="2_apgya"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4ee1"]
+size = Vector2(16, 18)
+
+[node name="Newspaper" instance=ExtResource("1_cp4vt")]
+region_rect = Rect2(480, 112, 16, 16)
+
+[node name="PickupArea" parent="." index="0"]
+dialogue_resource = ExtResource("2_apgya")
+added_item = "Newspaper"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_b4ee1")

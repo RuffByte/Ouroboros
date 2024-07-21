@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjmyailn2bkyk"]
+
+[ext_resource type="Script" path="res://Utility/Scripts/pickup_area.gd" id="1_3irof"]
+[ext_resource type="Texture2D" uid="uid://b5rjaf0v1ki32" path="res://Assets/Art/Tileset 3.1.png" id="1_d2q01"]
+
+[node name="Template item" type="Sprite2D"]
+texture = ExtResource("1_d2q01")
+region_enabled = true
+
+[node name="PickupArea" type="Area2D" parent="."]
+script = ExtResource("1_3irof")

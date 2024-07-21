@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://3a8vcityfhnl"
+path="res://.godot/imported/Study Room Key.dialogue-5c42fb45ca123edf2e59cbd72c022629.tres"
+
+[deps]
+
+source_file="res://dialogue/Study Room Key.dialogue"
+dest_files=["res://.godot/imported/Study Room Key.dialogue-5c42fb45ca123edf2e59cbd72c022629.tres"]
+
+[params]
+
+defaults=true
