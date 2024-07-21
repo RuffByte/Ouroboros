@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cm81x183buaw8" path="res://Assets/cone_2.0.png" id="10_vfvtv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ny15s"]
-radius = 5.5
+radius = 7.56637
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8cs4p"]
 atlas = ExtResource("10_mw5ol")

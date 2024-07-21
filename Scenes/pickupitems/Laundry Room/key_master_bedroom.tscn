@@ -8,9 +8,13 @@
 [node name="Key Master bedroom" instance=ExtResource("1_b52ri")]
 region_rect = Rect2(512, 192, 16, 16)
 
-[node name="PickupArea" parent="." index="0"]
+[node name="PickupArea" parent="." index="0" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("..")
 dialogue_resource = ExtResource("2_x17sn")
 added_item = "Key Master bedroom"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
 shape = SubResource("RectangleShape2D_32m3q")
+
+[connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]
+[connection signal="body_exited" from="PickupArea" to="PickupArea" method="_on_body_exited"]

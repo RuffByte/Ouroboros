@@ -9,10 +9,14 @@ size = Vector2(20, 71)
 [node name="Ammo" instance=ExtResource("1_kh3qf")]
 region_rect = Rect2(528, 48, 16, 56)
 
-[node name="PickupArea" parent="." index="0"]
+[node name="PickupArea" parent="." index="0" node_paths=PackedStringArray("sprite")]
+sprite = NodePath("..")
 dialogue_resource = ExtResource("2_1o2hb")
 added_item = "Ammo"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
 position = Vector2(0, 7.5)
 shape = SubResource("RectangleShape2D_56qen")
+
+[connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]
+[connection signal="body_exited" from="PickupArea" to="PickupArea" method="_on_body_exited"]

@@ -16,3 +16,6 @@ added_item = "book study"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_6qe5k")
+
+[connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]
+[connection signal="body_exited" from="PickupArea" to="PickupArea" method="_on_body_exited"]

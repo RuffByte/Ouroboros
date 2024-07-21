@@ -7,5 +7,6 @@
 texture = ExtResource("1_d2q01")
 region_enabled = true
 
-[node name="PickupArea" type="Area2D" parent="."]
+[node name="PickupArea" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_3irof")
+sprite = NodePath("..")
