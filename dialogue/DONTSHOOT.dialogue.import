@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://xau8ajs1hjy2"
+path="res://.godot/imported/DONTSHOOT.dialogue-6143fd2a686421c3c02c758c524033a9.tres"
+
+[deps]
+
+source_file="res://dialogue/DONTSHOOT.dialogue"
+dest_files=["res://.godot/imported/DONTSHOOT.dialogue-6143fd2a686421c3c02c758c524033a9.tres"]
+
+[params]
+
+defaults=true

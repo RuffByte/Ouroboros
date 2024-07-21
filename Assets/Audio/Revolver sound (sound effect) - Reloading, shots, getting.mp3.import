@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3rhabumaitm1"
+path="res://.godot/imported/Revolver sound (sound effect) - Reloading, shots, getting.mp3-baa9f88325e5df9bed9c84b709ab41dc.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Revolver sound (sound effect) - Reloading, shots, getting.mp3"
+dest_files=["res://.godot/imported/Revolver sound (sound effect) - Reloading, shots, getting.mp3-baa9f88325e5df9bed9c84b709ab41dc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
