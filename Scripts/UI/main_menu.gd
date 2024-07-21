@@ -16,6 +16,7 @@ func _ready() -> void:
 	create_action_remap_items()
 	focus_button()
 	SoundManager.play_sound("MidnightDreams")
+	Filter.visible = false
 
 func focus_button() -> void:
 	if button_vbox:
@@ -27,9 +28,10 @@ func _on_quit_pressed() -> void:
 	get_tree().quit()
 
 func _on_play_pressed() -> void:
-	TransitionManager.change_scene("res://Scenes/World/test_scene.tscn")
+	TransitionManager.change_scene("res://Scenes/Cutscenes/SHOOTITUP.tscn")
 	Ui.visible = true
 	Ui.update_slider()
+	Filter.visible = true
 
 func _on_master_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(MASTER_BUS, linear_to_db(value))
