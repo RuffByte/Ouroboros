@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbwb4udd6titw"]
+[gd_scene load_steps=8 format=3 uid="uid://dbwb4udd6titw"]
 
 [ext_resource type="PackedScene" uid="uid://h5pi65i2gbl6" path="res://Scenes/Rooms/2f/cuck_room.tscn" id="1_bvjp4"]
 [ext_resource type="Script" path="res://Scripts/Cutscenes/endingscene.gd" id="1_yafxp"]
 [ext_resource type="SpriteFrames" uid="uid://b8yulyjnd24mi" path="res://spriteframes/player.tres" id="2_nayy3"]
+[ext_resource type="PackedScene" uid="uid://ccqb2pb6j6gk6" path="res://Scenes/pentagramdoor.tscn" id="4_j64ud"]
 
 [sub_resource type="Animation" id="Animation_e1axn"]
 length = 0.001
@@ -138,6 +139,7 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 5
 position = Vector2(-65, -69)
 sprite_frames = ExtResource("2_nayy3")
 animation = &"PlayerIdle"
@@ -145,3 +147,8 @@ frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
+
+[node name="Door" parent="." instance=ExtResource("4_j64ud")]
+z_index = -999
+position = Vector2(0, 15)
+scale = Vector2(1.48, 13.813)

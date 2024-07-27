@@ -24,6 +24,7 @@ func dont_shoot() -> void:
 func shoot_sound() -> void:
 	SoundManager.play_sound("MagnumShot")
 	TransitionManager.flash_screen()
+	
 
 func on_finish() -> void:
 	if !end:
