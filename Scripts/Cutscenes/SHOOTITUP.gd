@@ -28,6 +28,6 @@ func shoot_sound() -> void:
 func on_finish() -> void:
 	if !end:
 		Ui.visible = true
-		TransitionManager.change_scene("res://Scenes/World/main_world.tscn")
+		TransitionManager.change_scene("res://Scenes/World/main_world_2.tscn")
 	else:
 		get_tree().quit()
