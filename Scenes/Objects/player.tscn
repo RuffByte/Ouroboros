@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://bkq3evnnyql11"]
+[gd_scene load_steps=55 format=3 uid="uid://bkq3evnnyql11"]
 
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_suhjh"]
 [ext_resource type="Script" path="res://Scripts/Player/PlayerStateMachine.gd" id="3_u6w7i"]
@@ -12,9 +12,26 @@
 [ext_resource type="Script" path="res://Scenes/Objects/Flashlight.gd" id="9_l0hti"]
 [ext_resource type="Texture2D" uid="uid://fvtccfj31tug" path="res://Assets/Art/Detective_SpriteSheet.png" id="10_mw5ol"]
 [ext_resource type="Texture2D" uid="uid://cm81x183buaw8" path="res://Assets/cone_2.0.png" id="10_vfvtv"]
+[ext_resource type="Texture2D" uid="uid://c3xwcqswk0ujw" path="res://Assets/Art/remaster.png" id="12_ro2i6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ny15s"]
 radius = 7.56637
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_366uo"]
+atlas = ExtResource("12_ro2i6")
+region = Rect2(0, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jd5rf"]
+atlas = ExtResource("12_ro2i6")
+region = Rect2(32, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u21id"]
+atlas = ExtResource("12_ro2i6")
+region = Rect2(64, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sgdc"]
+atlas = ExtResource("12_ro2i6")
+region = Rect2(96, 416, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8cs4p"]
 atlas = ExtResource("10_mw5ol")
@@ -154,6 +171,23 @@ region = Rect2(224, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_inys8"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_366uo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jd5rf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u21id")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1sgdc")
+}],
+"loop": true,
+"name": &"PlayerDeath",
+"speed": 1.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8cs4p")
@@ -326,12 +360,10 @@ animations = NodePath("../AnimatedSprite2D")
 movement_component = NodePath("../MovementComponent")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-visible = false
 texture = ExtResource("8_ia8xl")
 texture_scale = 0.09
 
 [node name="Flashlight" type="PointLight2D" parent="."]
-visible = false
 position = Vector2(-2.08165e-12, -13)
 texture = ExtResource("10_vfvtv")
 texture_scale = 0.2
@@ -347,8 +379,7 @@ position = Vector2(0, -13)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_inys8")
-animation = &"PlayerWalkRight"
-frame_progress = 0.374172
+animation = &"PlayerIdle"
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, -13)

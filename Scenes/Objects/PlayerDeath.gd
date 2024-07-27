@@ -8,7 +8,7 @@ func enter() -> void:
 	if collider:
 		collider.queue_free()
 	
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(4).timeout
 	TransitionManager.change_scene("res://Scenes/UI/main_menu.tscn")
 	
 

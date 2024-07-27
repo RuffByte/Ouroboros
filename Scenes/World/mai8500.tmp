@@ -1,0 +1,381 @@
+[gd_scene load_steps=37 format=3 uid="uid://s72x1c247aix"]
+
+[ext_resource type="PackedScene" uid="uid://dvw6yth2rqx3j" path="res://Scenes/Objects/ghost.tscn" id="2_q0sqo"]
+[ext_resource type="PackedScene" uid="uid://c10nonnehk66w" path="res://Scenes/InvisidbleDoor.tscn" id="2_uf5r0"]
+[ext_resource type="PackedScene" uid="uid://bkq3evnnyql11" path="res://Scenes/Objects/player.tscn" id="3_i4niy"]
+[ext_resource type="PackedScene" uid="uid://b0258jym32p5y" path="res://Scenes/Rooms/1f/1f_main.tscn" id="6_g3uhe"]
+[ext_resource type="PackedScene" uid="uid://ba2357qce845l" path="res://Scenes/Objects/closet.tscn" id="6_s4b2q"]
+[ext_resource type="PackedScene" uid="uid://bdcn1e8yoryqw" path="res://Scenes/Rooms/1f/garage.tscn" id="7_jsd8p"]
+[ext_resource type="PackedScene" uid="uid://c04hq7sirdu01" path="res://Scenes/Rooms/1f/study_room.tscn" id="8_tjt6u"]
+[ext_resource type="PackedScene" uid="uid://cyi0tgng62ttn" path="res://Scenes/Rooms/1f/guest_room_1.tscn" id="9_mgyss"]
+[ext_resource type="PackedScene" uid="uid://tqbh60r585lq" path="res://Scenes/Rooms/1f/guest_room_2.tscn" id="10_2pf26"]
+[ext_resource type="PackedScene" uid="uid://81dyxre2ba2x" path="res://Scenes/Rooms/1f/guest_room_2_bathroom.tscn" id="11_1hk0v"]
+[ext_resource type="PackedScene" uid="uid://u87kj8t7fh0l" path="res://Scenes/Rooms/1f/guest_room_1_bathroom.tscn" id="12_dxllb"]
+[ext_resource type="PackedScene" uid="uid://ce68q4mfp7uvc" path="res://Scenes/Rooms/2f/2f_main.tscn" id="12_eb6hv"]
+[ext_resource type="PackedScene" uid="uid://dwchhagpe2rie" path="res://Scenes/Rooms/Special Rooms/secret_room.tscn" id="12_s1pe3"]
+[ext_resource type="PackedScene" uid="uid://cq3lgc5q6b6hx" path="res://Scenes/Rooms/2f/master_bedroom.tscn" id="13_h50ml"]
+[ext_resource type="PackedScene" uid="uid://in02fake6rau" path="res://Scenes/Rooms/2f/mater_bedroom_bathroom.tscn" id="14_ktbr6"]
+[ext_resource type="PackedScene" uid="uid://2qp8mq7ybsl6" path="res://Scenes/Rooms/2f/dressing_room.tscn" id="15_gpr57"]
+[ext_resource type="PackedScene" uid="uid://b8pvwwed8c8g8" path="res://Scenes/Rooms/2f/laundry_room.tscn" id="16_ljoxf"]
+[ext_resource type="PackedScene" uid="uid://h5pi65i2gbl6" path="res://Scenes/Rooms/2f/cuck_room.tscn" id="17_44dqu"]
+[ext_resource type="PackedScene" uid="uid://bjqvxxruvleia" path="res://Scenes/Rooms/stair.tscn" id="18_64pls"]
+[ext_resource type="PackedScene" uid="uid://bgax0ijq1wp6j" path="res://Scenes/pickupitems/Study/book_study.tscn" id="19_wfpdp"]
+[ext_resource type="PackedScene" uid="uid://cs8doygr2njnw" path="res://Scenes/pickupitems/Secret Room/book_of_revival.tscn" id="20_khi31"]
+[ext_resource type="PackedScene" uid="uid://d0rwo1btdxofg" path="res://Scenes/pickupitems/Mater bedroom/note_master_bedroom.tscn" id="21_ooxvx"]
+[ext_resource type="PackedScene" uid="uid://1108qk3cmv3b" path="res://Scenes/pickupitems/Laundry Room/key_master_bedroom.tscn" id="22_wb8v7"]
+[ext_resource type="PackedScene" uid="uid://dqcl6m473mivb" path="res://Scenes/pickupitems/Kitchen/note_kitchen.tscn" id="23_3jwyf"]
+[ext_resource type="PackedScene" uid="uid://ruldpnllgd1y" path="res://Scenes/pickupitems/Kitchen/newspaper.tscn" id="24_tm3vf"]
+[ext_resource type="PackedScene" uid="uid://bc3hasr8di23v" path="res://Scenes/pickupitems/Kitchen/key_secret_room_key.tscn" id="25_abpv7"]
+[ext_resource type="PackedScene" uid="uid://tgmhkjjmxj7x" path="res://Scenes/pickupitems/Guest Room 2/picture_boy.tscn" id="26_pjk3x"]
+[ext_resource type="PackedScene" uid="uid://cbhus86jvfvcl" path="res://Scenes/pickupitems/Guest Room 2/note_guest_room.tscn" id="27_78lgs"]
+[ext_resource type="PackedScene" uid="uid://qnlk0topmagr" path="res://Scenes/pickupitems/Guest Room 2/key_study.tscn" id="28_il8y5"]
+[ext_resource type="PackedScene" uid="uid://uno7hbqai4bi" path="res://Scenes/pickupitems/Guest Room 1/journal.tscn" id="29_f1uai"]
+[ext_resource type="PackedScene" uid="uid://b5rrn1yamov00" path="res://Scenes/pickupitems/Garage/key_guest_room_2.tscn" id="30_hyx15"]
+[ext_resource type="PackedScene" uid="uid://7lhu0gl0fi47" path="res://Scenes/pickupitems/Garage/ammo.tscn" id="31_a5eoe"]
+[ext_resource type="PackedScene" uid="uid://bpr0emktiyypd" path="res://Scenes/hiddenDoor.tscn" id="32_qngot"]
+[ext_resource type="PackedScene" uid="uid://ccqb2pb6j6gk6" path="res://Scenes/pentagramdoor.tscn" id="34_3ldd4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h62nc"]
+size = Vector2(98, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0h11"]
+size = Vector2(334, 244)
+
+[node name="MainWorld" type="Node2D"]
+position = Vector2(1576, 0)
+
+[node name="PlayerEvent" type="Node" parent="."]
+
+[node name="enemies" type="Node" parent="."]
+
+[node name="Ghost" parent="enemies" instance=ExtResource("2_q0sqo")]
+z_index = 5
+position = Vector2(334, 230)
+
+[node name="Ghost2" parent="enemies" instance=ExtResource("2_q0sqo")]
+z_index = 5
+position = Vector2(88, 232)
+assignedLocation = "room 2f"
+
+[node name="Player" parent="." instance=ExtResource("3_i4niy")]
+position = Vector2(-806, 30)
+
+[node name="rooms" type="Node" parent="."]
+
+[node name="1F Main" parent="rooms" instance=ExtResource("6_g3uhe")]
+position = Vector2(770, 35)
+
+[node name="doors" type="Node2D" parent="rooms/1F Main"]
+
+[node name="Door" parent="rooms/1F Main/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(41, -146)
+room = NodePath("../../../Study Room")
+item_required = "key study"
+
+[node name="Door2" parent="rooms/1F Main/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(168, -146)
+room = NodePath("../../../Guest Room 2")
+item_required = "Key guest room 2"
+
+[node name="Door3" parent="rooms/1F Main/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(-48, -24)
+rotation = -1.5708
+room = NodePath("../../../Garage")
+
+[node name="Door4" parent="rooms/1F Main/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(120, -63)
+rotation = 3.14159
+room = NodePath("../../../GuestRoom 1")
+
+[node name="Door5" parent="rooms/1F Main/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(257, -96)
+rotation = 1.5708
+room = NodePath("../../../../Stairs")
+item_required = "test"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="rooms/1F Main"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rooms/1F Main/StaticBody2D"]
+position = Vector2(0, 41)
+shape = SubResource("RectangleShape2D_h62nc")
+
+[node name="Garage" parent="rooms" instance=ExtResource("7_jsd8p")]
+position = Vector2(220, 15)
+
+[node name="doors" type="Node2D" parent="rooms/Garage"]
+
+[node name="Door2" parent="rooms/Garage/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(97, 23)
+rotation = 1.5708
+room = NodePath("../../../1F Main")
+item_required = "test"
+
+[node name="Study Room" parent="rooms" instance=ExtResource("8_tjt6u")]
+position = Vector2(541, -512)
+
+[node name="doors" type="Node2D" parent="rooms/Study Room"]
+
+[node name="Door" parent="rooms/Study Room/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(25, 33)
+rotation = 3.14159
+room = NodePath("../../../1F Main")
+
+[node name="secretRoomDoor" parent="rooms/Study Room/doors" node_paths=PackedStringArray("room") instance=ExtResource("32_qngot")]
+position = Vector2(16, -50.0001)
+room = NodePath("../../../Secret Room")
+item_required = "secret key"
+
+[node name="GuestRoom 1" parent="rooms" instance=ExtResource("9_mgyss")]
+position = Vector2(915, 425)
+
+[node name="doors" type="Node2D" parent="rooms/GuestRoom 1"]
+
+[node name="Door" parent="rooms/GuestRoom 1/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(8, -82)
+room = NodePath("../../../1F Main")
+
+[node name="Door2" parent="rooms/GuestRoom 1/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(129, 7)
+rotation = 1.5708
+room = NodePath("../../../Guest Room 1 Bathroom")
+
+[node name="Guest Room 2" parent="rooms" instance=ExtResource("10_2pf26")]
+position = Vector2(882, -525)
+
+[node name="doors" type="Node2D" parent="rooms/Guest Room 2"]
+
+[node name="Door" parent="rooms/Guest Room 2/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(23, 49)
+rotation = 3.14159
+room = NodePath("../../../1F Main")
+
+[node name="Door2" parent="rooms/Guest Room 2/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(130, -41)
+rotation = 1.5708
+room = NodePath("../../../Guest room 2 bathroom")
+
+[node name="Guest room 2 bathroom" parent="rooms" instance=ExtResource("11_1hk0v")]
+position = Vector2(1239, -577)
+
+[node name="doors" type="Node2D" parent="rooms/Guest room 2 bathroom"]
+
+[node name="Door2" parent="rooms/Guest room 2 bathroom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(-50, 8)
+rotation = -1.5708
+room = NodePath("../../../Guest Room 2")
+
+[node name="Guest Room 1 Bathroom" parent="rooms" instance=ExtResource("12_dxllb")]
+position = Vector2(1272, 425)
+
+[node name="doors" type="Node2D" parent="rooms/Guest Room 1 Bathroom"]
+
+[node name="Door2" parent="rooms/Guest Room 1 Bathroom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(-49, 7)
+rotation = -1.5708
+room = NodePath("../../../GuestRoom 1")
+
+[node name="Secret Room" parent="rooms" instance=ExtResource("12_s1pe3")]
+position = Vector2(431, -1002)
+
+[node name="doors" type="Node2D" parent="rooms/Secret Room"]
+
+[node name="Door" parent="rooms/Secret Room/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(0, 65)
+rotation = -3.14159
+room = NodePath("../../../Study Room")
+
+[node name="Closet" parent="." instance=ExtResource("6_s4b2q")]
+z_index = 2
+position = Vector2(-818, -91)
+
+[node name="room 2f" type="Node" parent="."]
+
+[node name="2F Main" parent="room 2f" instance=ExtResource("12_eb6hv")]
+position = Vector2(-531, -429)
+
+[node name="doors" type="Node2D" parent="room 2f/2F Main"]
+
+[node name="Door" parent="room 2f/2F Main/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(-120, -35)
+room = NodePath("../../../Master Bedroom")
+item_required = "key Master bedroom"
+
+[node name="Door2" parent="room 2f/2F Main/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(-121, 65)
+rotation = 3.14159
+room = NodePath("../../../Laundry Room")
+item_required = "test"
+
+[node name="Door3" parent="room 2f/2F Main/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(-56, 65)
+rotation = 3.14159
+room = NodePath("../../../CuckRoom")
+item_required = "test"
+
+[node name="Door4" parent="room 2f/2F Main/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(0, 16)
+rotation = 1.57079
+room = NodePath("../../../../Stairs")
+item_required = "test"
+
+[node name="Master Bedroom" parent="room 2f" instance=ExtResource("13_h50ml")]
+position = Vector2(-875, -900)
+
+[node name="doors" type="Node2D" parent="room 2f/Master Bedroom"]
+
+[node name="Door3" parent="room 2f/Master Bedroom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(7, 66)
+rotation = 3.14159
+room = NodePath("../../../2F Main")
+item_required = "test"
+
+[node name="Door4" parent="room 2f/Master Bedroom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(130, 23)
+rotation = 1.57079
+room = NodePath("../../../Mater Bedroom Bathroom")
+item_required = "test"
+
+[node name="Door5" parent="room 2f/Master Bedroom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(130, -41)
+rotation = 1.57079
+room = NodePath("../../../Dressing Room")
+item_required = "test"
+
+[node name="Mater Bedroom Bathroom" parent="room 2f" instance=ExtResource("14_ktbr6")]
+position = Vector2(-112, -598)
+
+[node name="doors" type="Node2D" parent="room 2f/Mater Bedroom Bathroom"]
+rotation = 1.57079
+
+[node name="Door3" parent="room 2f/Mater Bedroom Bathroom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(7, 66)
+rotation = 3.14159
+room = NodePath("../../../Master Bedroom")
+item_required = "test"
+
+[node name="Dressing Room" parent="room 2f" instance=ExtResource("15_gpr57")]
+position = Vector2(-212, -1002)
+
+[node name="doors" type="Node2D" parent="room 2f/Dressing Room"]
+rotation = 1.57079
+
+[node name="Door3" parent="room 2f/Dressing Room/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(7, 66)
+rotation = 3.14159
+room = NodePath("../../../Master Bedroom")
+item_required = "test"
+
+[node name="Laundry Room" parent="room 2f" instance=ExtResource("16_ljoxf")]
+position = Vector2(-836, 8)
+
+[node name="doors" type="Node2D" parent="room 2f/Laundry Room"]
+
+[node name="Door" parent="room 2f/Laundry Room/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(9, -66)
+room = NodePath("../../../2F Main")
+item_required = "test"
+
+[node name="CuckRoom" parent="room 2f" instance=ExtResource("17_44dqu")]
+position = Vector2(-380, 8)
+
+[node name="doors" type="Node2D" parent="room 2f/CuckRoom"]
+
+[node name="Door" parent="room 2f/CuckRoom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(-55, -66)
+room = NodePath("../../../2F Main")
+item_required = "test"
+
+[node name="Stairs" parent="." instance=ExtResource("18_64pls")]
+position = Vector2(-62, -178)
+
+[node name="doors" type="Node2D" parent="Stairs"]
+position = Vector2(13, 16)
+scale = Vector2(0.640002, 0.640002)
+
+[node name="Door2" parent="Stairs/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(-73.4372, -24.9999)
+rotation = -1.5708
+scale = Vector2(1.4375, 5)
+room = NodePath("../../../room 2f/2F Main")
+
+[node name="Door3" parent="Stairs/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
+position = Vector2(-71.8747, 24.9999)
+rotation = -1.5708
+scale = Vector2(1.4375, 5)
+room = NodePath("../../../rooms/1F Main")
+
+[node name="Book study" parent="." instance=ExtResource("19_wfpdp")]
+z_index = 4
+position = Vector2(-1057, -501)
+
+[node name="Book of revival" parent="." instance=ExtResource("20_khi31")]
+z_index = 4
+position = Vector2(-1169, -1015)
+
+[node name="Note Master bedroom" parent="." instance=ExtResource("21_ooxvx")]
+z_index = 4
+position = Vector2(-2416, -903)
+
+[node name="Key Master bedroom" parent="." instance=ExtResource("22_wb8v7")]
+z_index = 4
+position = Vector2(-2416, -7)
+
+[node name="Note Kitchen" parent="." instance=ExtResource("23_3jwyf")]
+z_index = 4
+position = Vector2(-2380, -491)
+
+[node name="Newspaper" parent="." instance=ExtResource("24_tm3vf")]
+z_index = 4
+position = Vector2(-2338, -372)
+
+[node name="Key secret room key" parent="." instance=ExtResource("25_abpv7")]
+z_index = 4
+position = Vector2(-2427, -380)
+
+[node name="Picture boy" parent="." instance=ExtResource("26_pjk3x")]
+z_index = 4
+position = Vector2(-675, -551)
+
+[node name="Note Guest room" parent="." instance=ExtResource("27_78lgs")]
+z_index = 4
+position = Vector2(-637, -540)
+
+[node name="Key study" parent="." instance=ExtResource("28_il8y5")]
+z_index = 4
+position = Vector2(-733, -590)
+
+[node name="Journal" parent="." instance=ExtResource("29_f1uai")]
+z_index = 4
+position = Vector2(-633, 408)
+
+[node name="Key guest room 2" parent="." instance=ExtResource("30_hyx15")]
+z_index = 4
+position = Vector2(-1437, -19)
+
+[node name="Ammo" parent="." instance=ExtResource("31_a5eoe")]
+z_index = 4
+position = Vector2(-1284, -69)
+
+[node name="Door" parent="." node_paths=PackedStringArray("room") instance=ExtResource("34_3ldd4")]
+position = Vector2(-1957, 9)
+scale = Vector2(1.48, 13.8133)
+room = NodePath("../TRIGGEREND")
+item_required = "Book of revival"
+
+[node name="TRIGGEREND" type="Node2D" parent="."]
+position = Vector2(-2042, 1209)
+
+[node name="Area2D" type="Area2D" parent="TRIGGEREND"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TRIGGEREND/Area2D"]
+shape = SubResource("RectangleShape2D_v0h11")
+
+[node name="doors" type="Node2D" parent="TRIGGEREND"]
+position = Vector2(13, 16)
+scale = Vector2(0.640002, 0.640002)
+
+[node name="Door2" parent="TRIGGEREND/doors" instance=ExtResource("2_uf5r0")]
+position = Vector2(-21.7132, -25.533)
+rotation = -1.5708
+scale = Vector2(0.125004, 2.75001)
+room = NodePath("")

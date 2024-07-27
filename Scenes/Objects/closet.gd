@@ -32,15 +32,6 @@ func show_player():
 	player.visible = true	
 	does_ghost_see_player()
 
-func _on_area_2d_body_entered(body):
-	if body is Player:
-		player = body
-		player_can_hide = true
-
-func _on_area_2d_body_exited(body):
-	if body is Player:
-		player_can_hide = false
-		
 func does_ghost_see_player():
 	for enemy in owner.get_node("enemies").get_children():
 		if enemy is Ghost:
@@ -50,3 +41,19 @@ func does_ghost_see_player():
 				enemy.reset_aggro()
 				enemy.reset_idle()
 			print(dist)
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	var tween = create_tween()
+	tween.tween_property($Sprite2D, "modulate", Color(0.7,0.7,1), 0.1)
+	if area.owner is Player:
+		player = area.owner
+		player_can_hide = true
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	var tween = create_tween()
+	tween.tween_property($Sprite2D, "modulate", Color(1,1,1), 0.1)
+	if area.owner is Player:
+		player = null
+		player_can_hide = false
