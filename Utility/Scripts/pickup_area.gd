@@ -15,8 +15,6 @@ func _ready() -> void:
 	
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		var tween = create_tween()
-		tween.tween_property(sprite, "modulate", Color(1,1,0), 0.1)
 		in_area = true
 		
 func _on_body_exited(body: Node2D) -> void:

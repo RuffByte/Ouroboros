@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cimamuhmv0yvx"
+path="res://.godot/imported/Pentagram Note.dialogue-f80b638892e23fb605a7070acf0105e1.tres"
+
+[deps]
+
+source_file="res://dialogue/Pentagram Note.dialogue"
+dest_files=["res://.godot/imported/Pentagram Note.dialogue-f80b638892e23fb605a7070acf0105e1.tres"]
+
+[params]
+
+defaults=true

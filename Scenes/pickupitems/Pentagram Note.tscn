@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr0i6piqvb5kx"]
+
+[ext_resource type="PackedScene" uid="uid://bjmyailn2bkyk" path="res://Scenes/pickupitems/template_item.tscn" id="1_nm6dx"]
+[ext_resource type="Resource" uid="uid://cimamuhmv0yvx" path="res://dialogue/Pentagram Note.dialogue" id="2_r0m6v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gd8kd"]
+size = Vector2(30, 30)
+
+[node name="Pentagram Note" instance=ExtResource("1_nm6dx")]
+region_rect = Rect2(481.538, 112.756, 10.9456, 14.8644)
+
+[node name="PickupArea" parent="." index="0"]
+dialogue_resource = ExtResource("2_r0m6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" index="0"]
+shape = SubResource("RectangleShape2D_gd8kd")
+
+[connection signal="body_entered" from="PickupArea" to="PickupArea" method="_on_body_entered"]
+[connection signal="body_exited" from="PickupArea" to="PickupArea" method="_on_body_exited"]

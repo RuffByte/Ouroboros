@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://s72x1c247aix"]
+[gd_scene load_steps=39 format=3 uid="uid://s72x1c247aix"]
 
 [ext_resource type="PackedScene" uid="uid://dvw6yth2rqx3j" path="res://Scenes/Objects/ghost.tscn" id="2_q0sqo"]
 [ext_resource type="PackedScene" uid="uid://c10nonnehk66w" path="res://Scenes/InvisidbleDoor.tscn" id="2_uf5r0"]
@@ -34,6 +34,8 @@
 [ext_resource type="PackedScene" uid="uid://7lhu0gl0fi47" path="res://Scenes/pickupitems/Garage/ammo.tscn" id="31_a5eoe"]
 [ext_resource type="PackedScene" uid="uid://bpr0emktiyypd" path="res://Scenes/hiddenDoor.tscn" id="32_qngot"]
 [ext_resource type="PackedScene" uid="uid://ccqb2pb6j6gk6" path="res://Scenes/pentagramdoor.tscn" id="34_3ldd4"]
+[ext_resource type="PackedScene" uid="uid://dr0i6piqvb5kx" path="res://Scenes/pickupitems/Pentagram Note.tscn" id="35_10r8w"]
+[ext_resource type="Script" path="res://Scenes/World/TRIGGEREND.gd" id="36_x0yq5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h62nc"]
 size = Vector2(98, 20)
@@ -58,7 +60,7 @@ position = Vector2(88, 232)
 assignedLocation = "room 2f"
 
 [node name="Player" parent="." instance=ExtResource("3_i4niy")]
-position = Vector2(-806, 30)
+position = Vector2(-807, 16)
 
 [node name="rooms" type="Node" parent="."]
 
@@ -281,7 +283,7 @@ position = Vector2(-380, 8)
 [node name="doors" type="Node2D" parent="room 2f/CuckRoom"]
 
 [node name="Door" parent="room 2f/CuckRoom/doors" node_paths=PackedStringArray("room") instance=ExtResource("2_uf5r0")]
-position = Vector2(-55, -66)
+position = Vector2(-40, -66)
 room = NodePath("../../../2F Main")
 item_required = "test"
 
@@ -357,17 +359,22 @@ z_index = 4
 position = Vector2(-1284, -69)
 
 [node name="Door" parent="." node_paths=PackedStringArray("room") instance=ExtResource("34_3ldd4")]
-position = Vector2(-1957, 9)
+position = Vector2(-1956, 20)
 scale = Vector2(1.48, 13.8133)
 room = NodePath("../TRIGGEREND")
 item_required = "Book of revival"
 
+[node name="Pentagram Note" parent="." instance=ExtResource("35_10r8w")]
+position = Vector2(-1996, -18)
+
 [node name="TRIGGEREND" type="Node2D" parent="."]
 position = Vector2(-2042, 1209)
+script = ExtResource("36_x0yq5")
 
 [node name="Area2D" type="Area2D" parent="TRIGGEREND"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TRIGGEREND/Area2D"]
+position = Vector2(-1, 11)
 shape = SubResource("RectangleShape2D_v0h11")
 
 [node name="doors" type="Node2D" parent="TRIGGEREND"]
@@ -379,3 +386,20 @@ position = Vector2(-21.7132, -25.533)
 rotation = -1.5708
 scale = Vector2(0.125004, 2.75001)
 room = NodePath("")
+
+[node name="Closet2" parent="." instance=ExtResource("6_s4b2q")]
+position = Vector2(-1886, -38)
+
+[node name="Closet3" parent="." instance=ExtResource("6_s4b2q")]
+position = Vector2(-2139, -439)
+
+[node name="Closet4" parent="." instance=ExtResource("6_s4b2q")]
+position = Vector2(-2355, -958)
+
+[node name="Closet5" parent="." instance=ExtResource("6_s4b2q")]
+position = Vector2(-598, -583)
+
+[node name="Closet6" parent="." instance=ExtResource("6_s4b2q")]
+position = Vector2(-693, 367)
+
+[connection signal="body_entered" from="TRIGGEREND/Area2D" to="TRIGGEREND" method="_on_area_2d_body_entered"]

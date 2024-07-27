@@ -1,6 +1,6 @@
 [gd_scene load_steps=60 format=3 uid="uid://x2balkf1b1ry"]
 
-[ext_resource type="PackedScene" uid="uid://djp5l6nb61rh6" path="res://Scenes/Cutscenes/SHOOTITUP.tscn" id="1_64jg3"]
+[ext_resource type="PackedScene" uid="uid://uusbtanoryta" path="res://Scenes/Cutscenes/SHOOTITUP.tscn" id="1_64jg3"]
 [ext_resource type="Script" path="res://Scenes/Cutscenes/endingtwo.gd" id="1_g4352"]
 [ext_resource type="Texture2D" uid="uid://c3xwcqswk0ujw" path="res://Assets/Art/remaster.png" id="3_j6tgh"]
 [ext_resource type="Texture2D" uid="uid://fvtccfj31tug" path="res://Assets/Art/Detective_SpriteSheet.png" id="4_pjhsh"]
@@ -236,9 +236,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cahgo")
 }],
-"loop": true,
+"loop": false,
 "name": &"PlayerDeath",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -454,5 +454,5 @@ zoom = Vector2(5, 5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -167)
 sprite_frames = SubResource("SpriteFrames_tvp0c")
-animation = &"PlayerIdle"
+animation = &"PlayerDeath"
 autoplay = "PlayerIdle"
