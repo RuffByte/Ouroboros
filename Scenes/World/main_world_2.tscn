@@ -46,6 +46,9 @@ size = Vector2(334, 244)
 [node name="MainWorld" type="Node2D"]
 position = Vector2(1576, 0)
 
+[node name="Player" parent="." instance=ExtResource("3_i4niy")]
+position = Vector2(-805, 44)
+
 [node name="PlayerEvent" type="Node" parent="."]
 
 [node name="enemies" type="Node" parent="."]
@@ -58,9 +61,6 @@ position = Vector2(334, 230)
 z_index = 5
 position = Vector2(88, 232)
 assignedLocation = "room 2f"
-
-[node name="Player" parent="." instance=ExtResource("3_i4niy")]
-position = Vector2(-807, 16)
 
 [node name="rooms" type="Node" parent="."]
 
