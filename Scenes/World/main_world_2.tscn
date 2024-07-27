@@ -47,7 +47,7 @@ size = Vector2(334, 244)
 position = Vector2(1576, 0)
 
 [node name="Player" parent="." instance=ExtResource("3_i4niy")]
-position = Vector2(-805, 44)
+position = Vector2(-806, 49)
 
 [node name="PlayerEvent" type="Node" parent="."]
 

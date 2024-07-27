@@ -4,6 +4,8 @@ func enter() -> void:
 	player.velocity.x = 0
 	player.velocity.y = 0
 	var collider = owner.get_node_or_null("CollisionShape2D")
+	GameManager.key_items = []
+	
 	player.is_dead = true
 	if collider:
 		collider.queue_free()

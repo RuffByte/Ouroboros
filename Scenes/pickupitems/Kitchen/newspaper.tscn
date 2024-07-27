@@ -9,8 +9,7 @@ size = Vector2(16, 18)
 [node name="Newspaper" instance=ExtResource("1_cp4vt")]
 region_rect = Rect2(480, 112, 16, 16)
 
-[node name="PickupArea" parent="." index="0" node_paths=PackedStringArray("sprite")]
-sprite = NodePath("..")
+[node name="PickupArea" parent="." index="0"]
 dialogue_resource = ExtResource("2_apgya")
 added_item = "Newspaper"
 

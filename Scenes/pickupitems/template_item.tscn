@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjmyailn2bkyk"]
+[gd_scene load_steps=5 format=3 uid="uid://bjmyailn2bkyk"]
 
 [ext_resource type="Script" path="res://Utility/Scripts/pickup_area.gd" id="1_3irof"]
 [ext_resource type="Texture2D" uid="uid://b5rjaf0v1ki32" path="res://Assets/Art/Tileset 3.1.png" id="1_d2q01"]
+
+[sub_resource type="Gradient" id="Gradient_md8t1"]
+offsets = PackedFloat32Array(0, 0.682927, 1)
+colors = PackedColorArray(1, 1, 1, 0.443137, 0.0569106, 0.0569106, 0.0569106, 0.0569106, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wtou0"]
+gradient = SubResource("Gradient_md8t1")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [node name="Template item" type="Sprite2D"]
 texture = ExtResource("1_d2q01")
@@ -10,3 +19,7 @@ region_enabled = true
 [node name="PickupArea" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_3irof")
 sprite = NodePath("..")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6875, 0.6875)
+texture = SubResource("GradientTexture2D_wtou0")

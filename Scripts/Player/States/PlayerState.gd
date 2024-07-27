@@ -2,7 +2,6 @@ extends State
 class_name PlayerState
 
 @onready var player: Player = get_owner()
-
 var movement_component: MovementComponent
 var animations: AnimatedSprite2D
 var raycast: RayCast2D
@@ -19,6 +18,7 @@ func _input(event: InputEvent) -> void:
 	if GameManager.player_ammo > 0 and event.is_action_pressed("shoot") and !GameManager.shooting:
 		GameManager.player_ammo -= 1
 		GameManager.shooting = true
+		SoundManager.play_sound("MagnumShot")
 	
 		if raycast.is_colliding():
 			if raycast.get_collider() is Ghost:

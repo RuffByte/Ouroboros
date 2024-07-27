@@ -1,4 +1,5 @@
 extends Node2D
+class_name SHOOTITUP
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 const GAME_END = preload ("res://dialogue/gameEnd.dialogue")

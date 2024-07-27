@@ -375,7 +375,7 @@ position = Vector2(-0.5, -1)
 shape = SubResource("CircleShape2D_ny15s")
 
 [node name="GUN" type="RayCast2D" parent="."]
-position = Vector2(0, -13)
+position = Vector2(-2.08165e-12, -13)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
