@@ -24,6 +24,8 @@ func dont_shoot() -> void:
 func shoot_sound() -> void:
 	SoundManager.play_sound("MagnumShot")
 	TransitionManager.flash_screen()
+	if end:
+		$"../AnimatedSprite2D".play("PlayerDeath")
 	
 
 func on_finish() -> void:
