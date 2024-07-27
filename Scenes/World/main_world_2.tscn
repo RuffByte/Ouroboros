@@ -33,7 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://b5rrn1yamov00" path="res://Scenes/pickupitems/Garage/key_guest_room_2.tscn" id="30_hyx15"]
 [ext_resource type="PackedScene" uid="uid://7lhu0gl0fi47" path="res://Scenes/pickupitems/Garage/ammo.tscn" id="31_a5eoe"]
 [ext_resource type="PackedScene" uid="uid://bpr0emktiyypd" path="res://Scenes/hiddenDoor.tscn" id="32_qngot"]
-[ext_resource type="PackedScene" path="res://Scenes/pentagramdoor.tscn" id="34_3ldd4"]
+[ext_resource type="PackedScene" uid="uid://ccqb2pb6j6gk6" path="res://Scenes/pentagramdoor.tscn" id="34_3ldd4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h62nc"]
 size = Vector2(98, 20)
