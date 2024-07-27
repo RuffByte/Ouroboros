@@ -36,5 +36,5 @@ func _on_area_2d_area_exited(area):
 
 func _on_area_2d_body_entered(body):
 	if body is Enemy:
-		
+		$"../AnimatedSprite2D".play("PlayerDeath")
 		on_child_transition(current_state, "playerdeath")
