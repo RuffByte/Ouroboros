@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://o1kmnhs4u3dr"]
+[gd_scene load_steps=4 format=3 uid="uid://bpr0emktiyypd"]
 
 [ext_resource type="PackedScene" uid="uid://c10nonnehk66w" path="res://Scenes/InvisidbleDoor.tscn" id="1_7j368"]
 [ext_resource type="Texture2D" uid="uid://b5rjaf0v1ki32" path="res://Assets/Art/Tileset 3.1.png" id="2_cwsnm"]

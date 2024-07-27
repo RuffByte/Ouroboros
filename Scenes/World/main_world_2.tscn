@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bpr0emktiyypd"]
+[gd_scene load_steps=37 format=3 uid="uid://s72x1c247aix"]
 
 [ext_resource type="PackedScene" uid="uid://dvw6yth2rqx3j" path="res://Scenes/Objects/ghost.tscn" id="2_q0sqo"]
 [ext_resource type="PackedScene" uid="uid://c10nonnehk66w" path="res://Scenes/InvisidbleDoor.tscn" id="2_uf5r0"]
@@ -32,8 +32,8 @@
 [ext_resource type="PackedScene" uid="uid://uno7hbqai4bi" path="res://Scenes/pickupitems/Guest Room 1/journal.tscn" id="29_f1uai"]
 [ext_resource type="PackedScene" uid="uid://b5rrn1yamov00" path="res://Scenes/pickupitems/Garage/key_guest_room_2.tscn" id="30_hyx15"]
 [ext_resource type="PackedScene" uid="uid://7lhu0gl0fi47" path="res://Scenes/pickupitems/Garage/ammo.tscn" id="31_a5eoe"]
-[ext_resource type="PackedScene" uid="uid://o1kmnhs4u3dr" path="res://Scenes/hiddenDoor.tscn" id="32_qngot"]
-[ext_resource type="PackedScene" uid="uid://ccqb2pb6j6gk6" path="res://Scenes/pentagramdoor.tscn" id="34_3ldd4"]
+[ext_resource type="PackedScene" uid="uid://bpr0emktiyypd" path="res://Scenes/hiddenDoor.tscn" id="32_qngot"]
+[ext_resource type="PackedScene" path="res://Scenes/pentagramdoor.tscn" id="34_3ldd4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h62nc"]
 size = Vector2(98, 20)
