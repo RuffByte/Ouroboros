@@ -5,6 +5,7 @@ extends Node2D
 func _ready():
 	SoundManager.play_sound("TimeWhistle")
 	SoundManager.stop_sound("Horror")
+	Ui.show()
 
 
 
