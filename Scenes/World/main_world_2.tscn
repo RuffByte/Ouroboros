@@ -112,7 +112,6 @@ position = Vector2(220, 15)
 position = Vector2(97, 23)
 rotation = 1.5708
 room = NodePath("../../../1F Main")
-item_required = "test"
 
 [node name="Study Room" parent="rooms" instance=ExtResource("8_tjt6u")]
 position = Vector2(541, -512)
@@ -223,7 +222,7 @@ room = NodePath("../../../../Stairs")
 item_required = "test"
 
 [node name="Master Bedroom" parent="room 2f" instance=ExtResource("13_h50ml")]
-position = Vector2(-875, -900)
+position = Vector2(-672, -925)
 
 [node name="doors" type="Node2D" parent="room 2f/Master Bedroom"]
 
@@ -246,7 +245,7 @@ room = NodePath("../../../Dressing Room")
 item_required = "test"
 
 [node name="Mater Bedroom Bathroom" parent="room 2f" instance=ExtResource("14_ktbr6")]
-position = Vector2(-112, -598)
+position = Vector2(-109, -591)
 
 [node name="doors" type="Node2D" parent="room 2f/Mater Bedroom Bathroom"]
 rotation = 1.57079
@@ -318,7 +317,7 @@ position = Vector2(-1169, -1015)
 
 [node name="Note Master bedroom" parent="." instance=ExtResource("21_ooxvx")]
 z_index = 4
-position = Vector2(-2416, -903)
+position = Vector2(-2213, -928)
 
 [node name="Key Master bedroom" parent="." instance=ExtResource("22_wb8v7")]
 z_index = 4
@@ -393,7 +392,7 @@ room = NodePath("")
 position = Vector2(-2139, -439)
 
 [node name="Closet4" parent="." instance=ExtResource("6_s4b2q")]
-position = Vector2(-2355, -958)
+position = Vector2(-2152, -983)
 
 [node name="Closet5" parent="." instance=ExtResource("6_s4b2q")]
 position = Vector2(-598, -583)

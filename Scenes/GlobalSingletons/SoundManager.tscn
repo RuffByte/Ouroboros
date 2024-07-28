@@ -34,3 +34,4 @@ stream = ExtResource("7_216i1")
 
 [node name="SubwaySurfers" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_jq033")
+volume_db = -20.0

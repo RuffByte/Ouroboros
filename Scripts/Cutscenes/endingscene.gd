@@ -4,6 +4,7 @@ extends Node2D
 
 func _ready():
 	animation_player.play("ending_scene_1")
+	SoundManager.stop_sound("TimeWhistle")
 	SoundManager.play_sound("Horror")
 	Ui.hide()
 
