@@ -19,6 +19,7 @@ atlas = ExtResource("4_ylipi")
 region = Rect2(960, 104, 48, 32)
 
 [node name="Door" instance=ExtResource("1_16kxo")]
+item_required = "book of revival"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 shape = SubResource("RectangleShape2D_1q5ul")
@@ -47,3 +48,5 @@ position = Vector2(-5.78235e-12, -6.19539e-13)
 scale = Vector2(1.16001, 0.0953094)
 texture = SubResource("AtlasTexture_eael2")
 region_rect = Rect2(960, 104, 48, 32)
+
+[connection signal="body_entered" from="if locked/PickupArea2" to="." method="_on_pickup_area_2_body_entered"]
