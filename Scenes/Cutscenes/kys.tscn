@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1wx4iaub3soe"]
+
+[ext_resource type="Script" path="res://Scripts/kys.gd" id="1_j1r4h"]
+[ext_resource type="Texture2D" uid="uid://djqky7xu2hr31" path="res://Assets/TempAssets/image.png" id="2_nqgwp"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_j1r4h")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.6, 0.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.75, 0.25)
+scale = Vector2(2.74108, 3.04648)
+texture = ExtResource("2_nqgwp")

@@ -15,7 +15,6 @@ extends Control
 func _ready() -> void:
 	create_action_remap_items()
 	focus_button()
-	SoundManager.play_sound("MidnightDreams")
 	Filter.visible = false
 
 func focus_button() -> void:
@@ -28,7 +27,7 @@ func _on_quit_pressed() -> void:
 	get_tree().quit()
 
 func _on_play_pressed() -> void:
-	TransitionManager.change_scene("res://Scenes/Cutscenes/SHOOTITUP.tscn")
+	TransitionManager.change_scene("res://Scenes/Cutscenes/Driving home.tscn")
 	Ui.visible = false
 	Ui.update_slider()
 	Filter.visible = true
