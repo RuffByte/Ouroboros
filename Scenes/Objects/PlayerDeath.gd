@@ -9,9 +9,7 @@ func enter() -> void:
 	player.is_dead = true
 	if collider:
 		collider.queue_free()
-	
-	await get_tree().create_timer(4).timeout
-	TransitionManager.change_scene("res://Scenes/UI/main_menu.tscn")
+	TransitionManager.change_scene("res://Scenes/Cutscenes/Jumpscare.tscn")
 	
 
 func exit() -> void:

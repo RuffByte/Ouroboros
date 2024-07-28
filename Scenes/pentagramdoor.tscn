@@ -9,10 +9,10 @@
 size = Vector2(33.3332, 1.78571)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8n7vb"]
-size = Vector2(55.111, 4.16667)
+size = Vector2(44.4443, 3.57143)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kao04"]
-size = Vector2(23.3051, 1.83272)
+size = Vector2(29.4255, 2.24599)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eael2"]
 atlas = ExtResource("4_ylipi")
@@ -21,7 +21,6 @@ region = Rect2(960, 104, 48, 32)
 [node name="Door" instance=ExtResource("1_16kxo")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1q5ul")
 
 [node name="playerSpawnLocation" parent="." index="1"]
@@ -31,19 +30,16 @@ position = Vector2(0, -6.19538e-13)
 position = Vector2(0, 0.4)
 
 [node name="wall" type="CollisionShape2D" parent="if locked" index="0"]
-position = Vector2(0.222195, -0.4)
-scale = Vector2(1, 1)
+position = Vector2(-6.62278e-07, -0.4)
 shape = SubResource("RectangleShape2D_8n7vb")
 
-[node name="PickupArea2" parent="if locked" index="1" node_paths=PackedStringArray("sprite") instance=ExtResource("2_f80o8")]
+[node name="PickupArea2" parent="if locked" index="1" instance=ExtResource("2_f80o8")]
 position = Vector2(0, -0.4)
 scale = Vector2(1.888, 1.85516)
-sprite = NodePath("")
 dialogue_resource = ExtResource("3_yxc4a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="if locked/PickupArea2" index="0"]
-position = Vector2(-3.06268e-12, 0)
-scale = Vector2(1, 1)
+position = Vector2(-1.87996e-06, -8.60601e-08)
 shape = SubResource("RectangleShape2D_kao04")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="3"]

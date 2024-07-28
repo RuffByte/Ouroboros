@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca4fkp0cvgbjj"]
+
+[ext_resource type="VideoStream" path="res://Assets/Video/DrivingHomeCut.ogv" id="1_uxbvb"]
+[ext_resource type="Script" path="res://Scripts/Cutscenes/drivinghome.gd" id="2_jyomd"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.55, 0.55)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -953.0
+offset_top = -555.0
+offset_right = 967.0
+offset_bottom = 533.0
+stream = ExtResource("1_uxbvb")
+autoplay = true
+script = ExtResource("2_jyomd")
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]

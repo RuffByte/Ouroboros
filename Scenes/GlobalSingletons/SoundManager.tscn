@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://da3aihdf10urg"]
+[gd_scene load_steps=9 format=3 uid="uid://da3aihdf10urg"]
 
 [ext_resource type="Script" path="res://Scripts/GlobalSingletons/SoundManager.gd" id="1_rmjwp"]
 [ext_resource type="AudioStream" uid="uid://baycbvv4pk726" path="res://Assets/Audio/Music/1- Midnight Dreams.mp3" id="2_ky5mb"]
 [ext_resource type="AudioStream" uid="uid://b2v5i0qv8hnw2" path="res://Assets/Audio/SFX/308 Single.mp3" id="3_e74ig"]
+[ext_resource type="AudioStream" uid="uid://d1efxtfnfg8li" path="res://Assets/Audio/Music/Time Whistle.mp3" id="4_yidvw"]
+[ext_resource type="AudioStream" uid="uid://dvjv2l0e72ebh" path="res://Assets/Audio/Pixelated Boom.wav" id="5_o7hnt"]
+[ext_resource type="AudioStream" uid="uid://bqqd55ge6auhj" path="res://Assets/Audio/Vine Boom Sound Effect.mp3" id="6_cl48a"]
+[ext_resource type="AudioStream" uid="uid://qvivqk3g8aut" path="res://Assets/Audio/Horror.wav" id="7_216i1"]
+[ext_resource type="AudioStream" uid="uid://chi03xiniogxh" path="res://Assets/Audio/Music/subway.mp3" id="8_jq033"]
 
 [node name="SoundManager" type="Node2D"]
 process_mode = 3
@@ -14,3 +19,18 @@ stream = ExtResource("2_ky5mb")
 
 [node name="MagnumShot" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_e74ig")
+
+[node name="TimeWhistle" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_yidvw")
+
+[node name="PixelatedBoom" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_o7hnt")
+
+[node name="VineBoom" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_cl48a")
+
+[node name="Horror" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_216i1")
+
+[node name="SubwaySurfers" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_jq033")

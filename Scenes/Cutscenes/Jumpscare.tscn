@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://0tgedkjrcbxd"]
+
+[ext_resource type="Script" path="res://Scripts/Jumpscare.gd" id="1_wb6t3"]
+[ext_resource type="VideoStream" path="res://Assets/Video/jumpscare2.ogv" id="2_xjb8x"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wb6t3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.6, 0.6)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -961.0
+offset_top = -550.0
+offset_right = 959.0
+offset_bottom = 538.0
+stream = ExtResource("2_xjb8x")
+volume_db = 10.0
+autoplay = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

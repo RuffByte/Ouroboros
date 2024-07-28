@@ -4,6 +4,7 @@ extends Node2D
 
 func _ready():
 	animation_player.play("ending_scene_1")
+	SoundManager.play_sound("Horror")
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

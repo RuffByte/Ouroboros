@@ -15,6 +15,7 @@ func _physics_process(delta: float) -> void:
 	
 func anim_start() -> void:
 	animation_player.play("introduction")
+	SoundManager.play_sound("Horror")
 
 func game_end() -> void:
 	DialogueManager.show_example_dialogue_balloon(GAME_END, "start")
@@ -34,4 +35,4 @@ func on_finish() -> void:
 		Ui.visible = true
 		TransitionManager.change_scene("res://Scenes/World/main_world_2.tscn")
 	else:
-		get_tree().quit()
+		TransitionManager.change_scene("res://Scenes/Cutscenes/kys.tscn")
