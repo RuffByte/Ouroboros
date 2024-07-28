@@ -15,7 +15,7 @@ offset_top = -550.0
 offset_right = 959.0
 offset_bottom = 538.0
 stream = ExtResource("2_xjb8x")
-volume_db = -80.0
+volume_db = 5.0
 autoplay = true
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
