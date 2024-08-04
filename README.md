@@ -7,7 +7,7 @@ This is RuffByte's submission for the 2024 Kiwi Jam!
 | Name                     | Role            |
 | ------------------------ | --------------- |
 | Anton Garay              | Project Lead / Developer |
-| Chanasit Jitsawatpaiboon | Systems Designer / Developer       |
+| Tulza | Systems Designer / Developer       |
 | Lawrence Li          | Generalist |
 | Mayo       | Lead Writer / Creative Director
 | Matthew Shing    | Tileset Artist       |
